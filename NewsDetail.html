@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>消息详情</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="css/mui.min.css">
+
+		<style type="text/css">
+			html,
+			body {
+				height: 100%;
+				overflow: hidden;
+			}
+			
+			body {
+				background-image: url(img/bg.jpg);
+				background-size: cover;
+				background-repeat: no-repeat;
+			}
+			
+			.nav-space {
+				padding-top: 15px;
+			}
+			
+			.nav-bar {
+				background-image: url(img/top.jpg);
+				background-size: 116.5%;
+				background-repeat: no-repeat;
+				min-height: 50px;
+			}
+			
+			.nav-bar h2 {
+				margin-top: 0;
+				font-family: "微软雅黑";
+				text-align: center;
+				font-weight: 100;
+				font-size: 1.4rem;
+				color: white;
+				line-height: 50px;
+				margin-bottom: 0;
+			}
+			
+			.nav-bar .nav-bar-img {
+				width: 30px;
+				position: absolute;
+				top: 25px;
+			}
+			
+			.nav-bar .nav-bar-img-left {
+				left: 20px;
+			}
+			
+			.nav-bar .nav-bar-img-right {
+				right: 20px;
+				width: 25px;
+			}
+			
+			.mui-content {}
+			
+			.mui-content .news {
+				background-color: white;
+				padding: 10px 20px;
+				font-family: "微软雅黑";
+			}
+			
+			.mui-content .news .news-title {
+				font-size: 1.1rem;
+				margin-bottom: 10px;
+			}
+			
+			.mui-content .news .news-date {
+				font-size: 0.9rem;
+				color: #a0a0a0;
+				margin-bottom: 10px;
+			}
+			
+			.mui-content .news .news-content {
+				font-size: 0.9rem;
+				color: #a0a0a0;
+				margin-bottom: 10px;
+				text-indent: 1.8rem;
+			}
+			
+			.mui-content .news .news-footer {
+				/*float: left;*/
+			}
+			
+			.mui-content .news .news-footer .zan-btn img {
+				width: 0.9rem;
+			}
+			
+			.mui-content .news .news-footer .read-num p {
+				font-size: 0.9rem;
+			}
+			
+			.mui-content .news .news-footer .message-btn a {
+				font-size: 0.9rem;
+				color: #5c6e81;
+			}
+			
+			.mui-content .message {
+				background-color: #cbcbcb;
+				padding: 10px 20px;
+				font-family: "微软雅黑";
+			}
+			
+			.mui-content .message .message-line {
+				width: 100%;
+				height: 1px;
+				border: 1px dashed #c3c5c4;
+				text-align: center;
+				margin-top: 10px;
+			}
+			
+			.mui-content .message .message-line span {
+				font-size: 0.9rem;
+				color: #909090;
+				position: relative;
+				top: -10px;
+			}
+			
+			.mui-content .message .message-content {
+				font-size: 0.9rem;
+				color: #a0a0a0;
+				padding: 10px 0;
+			}
+			
+			.mui-content .message .message-content .message-avatar img {
+				width: 70%;
+			}
+			
+			.mui-content .message .message-content .message-detail {
+				font-size: 0.8rem;
+				line-height: 2;
+			}
+			
+			.mui-content .message .message-content .message-detail .message-info {
+				line-height: 1.5;
+			}
+			
+			.mui-content .message .message-content .message-right img {
+				width: 0.9rem;
+				float: left;
+				position: relative;
+				top: 4px;
+				margin-right: 10px;
+			}
+			
+			.mui-content .message .message-content .message-right span {
+				width: 0.9rem;
+				float: left;
+				text-align: center;
+			}
+		</style>
+	</head>
+
+	<body>
+		<nav class="nav-bar nav-space">
+			<img class="nav-bar-img nav-bar-img-left go-back" src="img/back.png">
+			<h2>&nbsp;</h2>
+			<img class="nav-bar-img nav-bar-img-right" src="img/share.png">
+		</nav>
+
+		<div class="mui-content">
+			<div class="news">
+				<div class="news-title">
+					我是标题,凌晨，华北天空一声巨响！一颗卫星腾空而起，一技术全球首创，to be biggest dreamer
+				</div>
+				<div class="news-date">
+					2018-05-09
+				</div>
+				<div class="news-content">
+					<p>据中国新闻网5月9日报道称，中国成功发射高分五号卫星。而值得注意的是，从“高分五号”的研制立项，再到最后的成功发射，经过了长达十年的漫长历程。</p>
+					<p>此次在凌晨华北天空的一声巨响声中，高分五号卫星腾空而起。据悉高分五号卫星是我国自主研制的全谱段高光谱卫星，也是世界首颗实现对大气和陆地综合观测的环境探测卫星，这种高分辨率的观测系统技术是全球首创，这种高分辨率的观测系统技术是全球首创，这种高分辨率的观测系统技术是全球首创，这种高分辨率的观测系统技术是全球首创，，可满足当前我国对于环境监测的多方面需求，是当之无愧的太空“环保卫士”。</p>
+				</div>
+				<div class="mui-row news-footer">
+					<div class="mui-col-xs-1 mui-col-sm-1 zan-btn">
+						<img src="img/zan.png" />
+					</div>
+					<div class="mui-col-xs-9 mui-col-sm-9 read-num">
+						<p>阅读:<span>998</span></p>
+					</div>
+					<div class="mui-col-xs-2 mui-col-sm-2 message-btn">
+						<a href="">留言</a>
+					</div>
+				</div>
+			</div>
+			<div class="message">
+				<div class="message-line">
+					<span>留言</span>
+				</div>
+				<div class="mui-row message-content">
+					<div class="mui-col-xs-2 mui-col-sm-2 message-avatar">
+						<img src="img/user.png" />
+					</div>
+					<div class="mui-col-xs-8 mui-col-sm-8 message-detail">
+						<div class="username">
+							用户001
+						</div>
+						<div class="message-info">
+							美国再也不敢轻视我们了吧?哈哈哈。我们要为中华之崛起而读书，建立具有中国特色的社会主义国家。
+						</div>
+						<div class="message-time-passed">
+							<span>1分钟</span>前
+						</div>
+					</div>
+					<div class="mui-col-xs-2 mui-col-sm-2 message-right">
+						<div class="zan-btn">
+							<img src="img/zan.png" /><span class="zan-num">92</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="js/mui.js"></script>
+		<script src="js/jquery-3.3.1.js"></script>
+		<script>
+
+			$('.go-back').on('tap', function() {
+				history.back();
+			})
+		</script>
+	</body>
+
+</html>

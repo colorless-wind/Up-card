@@ -1,0 +1,79 @@
+html,
+body {
+	height: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+.mui-content {
+	background: none;
+	display: none;
+}
+
+.menus {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	text-align: center;
+	z-index: 3;
+}
+
+.menus .new-btn img {
+	width: 53px;
+	height: 23px;
+	position: fixed;
+	bottom: 20px;
+	left: 18px;
+}
+
+.menus .me-btn img {
+	width: 37px;
+	height: 23px;
+	position: fixed;
+	bottom: 20px;
+	right: 12px;
+}
+
+.menus .product-btn img {
+	width: 38px;
+	position: fixed;
+	bottom: 20px;
+	left: 48%;
+	z-index: 99;
+}
+
+.start-page {
+	width: 100%;
+	position: relative;
+	z-index: 2;
+}
+
+.main-page {
+	width: 100%;
+	position: absolute;
+	bottom: -752px;
+	z-index: 1;
+	/*display: none;*/
+}
+
+.search-page {
+	width: 40px;
+	height: 40px;
+	border-radius: 40px;
+	position: absolute;
+	z-index: 3;
+	top: 0;
+	right: 0;
+	display: inline-block;
+}
+
+.my-main-card {
+	width: 55px;
+	height: 55px;
+	border-radius: 55px;
+	position: absolute;
+	z-index: 3;
+	top: 810px;
+	right: 0;
+	display: inline-block;
+}

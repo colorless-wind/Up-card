@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>登录</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="css/mui.min.css">
+
+		<style type="text/css">
+			html,
+			body {
+				height: 100%;
+				overflow: hidden;
+			}
+			
+			body {
+				background-image: url(img/bg.png);
+				background-size: cover;
+				background-repeat: no-repeat;
+			}
+			
+			footer {
+				position: absolute;
+				bottom: 20px;
+				text-align: center;
+				width: 100%;
+			}
+			
+			footer a {
+				font-family: "微软雅黑";
+				color: white;
+				font-size: 0.7rem;
+				letter-spacing: 0.1rem;
+				text-decoration: underline
+			}
+			
+			.mui-content {
+				background: none;
+				padding-top: 20%;
+			}
+			
+			.mui-content form {
+				border-radius: 3px;
+				margin: 5% 12% 0 12%;
+			}
+			
+			.mui-content .mui-input-group .mui-input-row {
+				height: 56px;
+				overflow: visible;
+			}
+			
+			.mui-content form .mui-input-row label {
+				width: 20%;
+				padding: 18px 0 18px 25px;
+			}
+			
+			.mui-content form .mui-input-row label .username {
+				width: 18px;
+			}
+			
+			.mui-content form .mui-input-row label .password {
+				width: 15px;
+				margin-left: 2.5px;
+			}
+			
+			.mui-content form .mui-input-row label~input,
+			.mui-input-row label~select,
+			.mui-input-row label~textarea {
+				width: 80%;
+				padding: 18px 15px 18px 0;
+				height: auto;
+			}
+			
+			.mui-input-group .mui-input-row:after {
+				right: 15px;
+			}
+			
+			.mui-input-group>.mui-input-row:last-child::after {
+				height: 0;
+			}
+			
+			.mui-input-group:after {
+				height: 0;
+			}
+			
+			.mui-content .logo {
+				text-align: center;
+			}
+			
+			.mui-content .logo img {
+				width: 50%;
+			}
+			
+			.mui-input-row .mui-btn.login-btn {
+				background-color: #54b7db;
+				width: calc(100% - 40px);
+				position: absolute;
+				top: 34px;
+				left: 20px;
+				border: none;
+				font-family: "微软雅黑";
+				font-size: 1rem;
+			}
+			
+			.mui-input-row .mui-btn.login-btn a {
+				color: white;
+			}
+			
+			.mui-input-row .mui-btn.register-btn {
+				background-color: #e13761;
+				width: calc(100% - 40px);
+				position: absolute;
+				top: 84px;
+				left: 20px;
+				border: none;
+				font-family: "微软雅黑";
+				font-size: 1rem;
+			}
+			
+			.mui-input-row .mui-btn.register-btn a {
+				color: white;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<div class="mui-content">
+			<div class="logo">
+				<img src="img/up.png" />
+			</div>
+			<form id='login-form' class="mui-input-group">
+				<div class="mui-input-row">
+					<label><img src="img/usename.png" class="username"/></label>
+					<input id='account' type="text" class="mui-input-clear mui-input" placeholder="Username">
+				</div>
+				<div class="mui-input-row">
+					<label><img src="img/password.png" class="password"/></label>
+					<input id='password' type="password" class="mui-input-clear mui-input" placeholder="Password">
+				</div>
+				<div class="mui-input-row">
+					<a href="ProductCenter.html"><button id='login' type="button" class="mui-btn mui-btn-block mui-btn-primary login-btn">登录</button></a>
+					<a href="register.html"><button id='reg' type="button" class="mui-btn mui-btn-block mui-btn-primary register-btn">注册</button></a>
+				</div>
+			</form>
+
+		</div>
+
+		<footer>
+			<a href="">忘记密码</a>
+		</footer>
+		
+		<script src="js/mui.js"></script>
+		<script src="js/jquery-3.3.1.js"></script>
+		<script>
+		</script>
+	</body>
+
+</html>

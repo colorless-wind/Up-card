@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>搜索中心</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="css/mui.min.css">
+
+		<style type="text/css">
+			html,
+			body {
+				height: 100%;
+				overflow: hidden;
+			}
+			
+			body {
+				background-image: url(img/bg.jpg);
+				background-size: cover;
+				background-repeat: no-repeat;
+			}
+			
+			.mui-content {
+				background: none;
+				padding: 35px 56px 0 50px;
+			}
+			
+			.hot-recommendation {
+				background-color: #ebe7ed;
+				width: 100%;
+				padding: 15px 5px;
+				float: left;
+				font-family: "微软雅黑";
+			}
+			
+			.hot-recommendation .title {
+				margin-bottom: 10px;
+				padding-left: 20px;
+				font-size: 1rem;
+			}
+			
+			.hot-recommendation .key-words {
+				width: 100%;
+				float: left;
+			}
+			
+			.hot-recommendation .key-words .word-group {
+				float: left;
+				width: 33%;
+				text-align: center;
+			}
+			
+			.hot-recommendation .key-words .word-line {
+				float: left;
+				width: 1px;
+				height: 35px;
+				background-color: #a799ab;
+				padding: 15px 0;
+				margin: 10px 0 10px 0;
+			}
+			
+			.nav-space {
+				padding-top: 15px;
+			}
+			
+			.nav-bar {
+				background-image: url(img/top.jpg);
+				background-size: 116.5%;
+				background-repeat: no-repeat;
+				min-height: 50px;
+				padding-bottom: 10px;
+			}
+			
+			.nav-bar .nav-bar-img {
+				width: 30px;
+				position: absolute;
+				top: 25px;
+			}
+			
+			.nav-bar .nav-bar-img-left {
+				left: 20px;
+			}
+			
+			.nav-bar .nav-bar-img-right {
+				right: 20px;
+			}
+			
+			.nav-bar .search-bar {
+				width: 80%;
+				margin-left: 20%;
+				margin-top: 6px;
+			}
+			
+			.nav-bar .search-bar .search-bg {
+				width: 75%;
+				height: 34px;
+				position: absolute;
+				z-index: 1;
+				opacity: 0.8;
+			}
+			
+			.nav-bar .search-bar .search-btn {
+				position: absolute;
+				z-index: 2;
+				width: 25px;
+				margin-top: 5px;
+				margin-left: 5px;
+			}
+			
+			.nav-bar .search-bar input {
+				width: 80%;
+				background: none;
+				border: none;
+				position: relative;
+				z-index: 2;
+				height: 34px;
+				padding-left: 25px;
+				font-family: "微软雅黑";
+				color: #efefef;
+			}
+			
+			.nav-bar .search-bar input::-webkit-input-placeholder {
+				/* WebKit browsers */
+				color: #dfdade;
+			}
+			
+			.nav-bar .search-bar input:-moz-placeholder {
+				/* Mozilla Firefox 4 to 18 */
+				color: #dfdade;
+			}
+			
+			.nav-bar .search-bar input::-moz-placeholder {
+				/* Mozilla Firefox 19+ */
+				color: #dfdade;
+			}
+			
+			.nav-bar .search-bar input:-ms-input-placeholder {
+				/* Internet Explorer 10+ */
+				color: #dfdade;
+			}
+		</style>
+	</head>
+
+	<body>
+		<nav class="nav-bar nav-space">
+			<img class="nav-bar-img nav-bar-img-left go-back" src="img/back.png">
+			<div class="search-bar">
+				<img src="img/search_bg.png" class="search-bg" />
+				<input name="" id="" value="" placeholder="输入关键词" />
+				<img src="img/search.png" class="search-btn" />
+			</div>
+		</nav>
+
+		<div class="mui-content">
+			<div class="hot-recommendation">
+				<div class="title">
+					热门推荐
+				</div>
+				<div class="key-words">
+					<div class="word-group">
+						<p>3.14°</p>
+						<p>情侣卡</p>
+					</div>
+					<div class="word-line"></div>
+					<div class="word-group">
+						<p>雀神</p>
+						<p>Hero主题</p>
+					</div>
+					<div class="word-line"></div>
+					<div class="word-group">
+						<p>活动</p>
+						<p>16°</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="js/mui.js"></script>
+		<script src="js/jquery-3.3.1.js"></script>
+		<script>
+			$('.go-back').on('tap', function() {
+				history.back();
+			})
+			
+			$('.search-btn').on('tap', function() {
+				location.href = "SearchResult.html";
+			})
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>产品详情</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+		<meta name="apple-mobile-web-app-status-bar-style" content="#0d0d3f">
+		<!--mui-->
+		<link rel="stylesheet" href="css/mui.min.css">
+		<!--iSlider-->
+		<link rel="stylesheet" href="lib/iSlider/style/iSlider.css" />
+		<!--swiper4-->
+		<link rel="stylesheet" href="lib/swiper4/css/swiper.css" />
+		<!--public-->
+		<link rel="stylesheet" href="css/public.css">
+		<!--私有css-->
+		<link rel="stylesheet" href="css/ProductDetail.css">
+
+	</head>
+
+	<body>
+		<div class="mui-content" id="iSlider-wrapper">
+			<!--操作指示-->
+			<div class="operation-guide shake">
+				<img src="img/guide.png" />
+			</div>
+			<!--菜单项-->
+			<div class="mui-row menus">
+				<div class="mui-col-xs-4 mui-col-sm-4">
+					<div class="new-btn">
+						<img src="img/120.png" />
+					</div>
+				</div>
+				<div class="mui-col-xs-4 mui-col-sm-4">
+					<div class="product-btn">
+						<img src="img/666.png" />
+					</div>
+				</div>
+				<div class="mui-col-xs-4 mui-col-sm-4">
+					<div class="me-btn">
+						<img src="img/216.png" />
+					</div>
+				</div>
+			</div>
+			<!--右侧功能按钮-->
+			<a class="search-btn"><img src="img/search_right.png" /></a>
+			<div class="menus-right-bar">
+				<a class="attention-btn"><img src="img/attention.png" /></a>
+				<p>关注</p>
+				<a class="zan-btn" data-switch="on"><img src="img/zan_right.png" /></a>
+				<p>10<span>w+</span></p>
+				<a class="share-btn"><img src="img/share_right.png" /></a>
+				<p>1<span>w+</span></p>
+			</div>
+			<a class="melody-btn"><img src="img/music.png" /></a>
+			<a class="music-btn"><img src="img/iconcup.png" /></a>
+		</div>
+		<script type="text/x-handlebars-template" id="ran-series-1-tpl">
+			<!--燃系列1-->
+			<div id="ran-series-1">
+				<div class="card card-white">
+					<div class="card-cover">
+						<img src="img/cardupwhite.png" />
+					</div>
+					<div class="card-apply">
+						<a href=""><img src="img/btn_apply.png" /></a>
+					</div>
+					<div class="card-price">
+						<p>制卡费：<span class="old-price-for-line"><span class="old-price">50￥</span></span>&nbsp;&nbsp;&nbsp;<span class="old-price">0￥</span></p>
+					</div>
+					<div class="card-craft">
+						<p>彩色PVC&nbsp;&nbsp;|&nbsp;&nbsp;立金&nbsp;&nbsp;|&nbsp;&nbsp;浮雕</p>
+					</div>
+				</div>
+				<div class="card card-black">
+					<div class="card-cover">
+						<img src="img/cardupblack.png" />
+					</div>
+					<div class="card-apply">
+						<a href=""><img src="img/btn_apply.png" /></a>
+					</div>
+					<div class="card-price">
+						<p>制卡费：<span class="old-price-for-line"><span class="old-price">50￥</span></span>&nbsp;&nbsp;&nbsp;<span class="old-price">0￥</span></p>
+					</div>
+					<div class="card-craft">
+						<p>FOIL&nbsp;&nbsp;|&nbsp;&nbsp;立金&nbsp;&nbsp;|&nbsp;&nbsp;烫印</p>
+					</div>
+				</div>
+				<div class="card-slogan">
+					我们的梦想 向上、向自由
+				</div>
+			</div>
+		</script>
+		<script type="text/x-handlebars-template" id="ran-series-2-tpl">
+			<!--燃系列2-->
+			<div id="ran-series-2">
+				<div class="card">
+					<div class="card-cover">
+						<img src="img/douyincard.png" />
+					</div>
+					<div class="card-apply">
+						<a href=""><img src="img/btn_apply.png" /></a>
+					</div>
+					<div class="card-price">
+						<p>制卡费：<span class="old-price-for-line"><span class="old-price">50￥</span></span>&nbsp;&nbsp;&nbsp;<span class="old-price">0￥</span></p>
+					</div>
+					<div class="card-craft">
+						<p>FOIL&nbsp;&nbsp;|&nbsp;&nbsp;立金&nbsp;&nbsp;|&nbsp;&nbsp;烫印</p>
+					</div>
+				</div>
+				<div class="card-slogan">
+					记录美好生活
+				</div>
+			</div>
+		</script>
+		<script type="text/x-handlebars-template" id="ran-series-3-tpl">
+			<!--燃系列3-->
+			<div id="ran-series-3">
+				<div class="card">
+					<div class="card-cover">
+						<div class="swiper-container swiper-container-ran3">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide" data-name="光大VISA世界杯卡" data-card-id="20423"><img src="img/1.png" /></div>
+								<div class="swiper-slide" data-name=""><img src="img/10_blue.png" /></div>
+								<div class="swiper-slide" data-name=""><img src="img/10_yellow.png" /></div>
+								<div class="swiper-slide" data-name=""><img src="img/7_red.png" /></div>
+								<!--<div class="swiper-slide" data-name="光大VISA世界杯卡3333" data-card-id="1545465"><img src="img/5_blue.png" /></div>-->
+							</div>
+						</div>
+					</div>
+					<div class="card-apply">
+						<a><img src="img/btn_apply.png" /></a>
+					</div>
+					<div class="card-price">
+						<p>制卡费：<span class="old-price-for-line"><span class="old-price">50￥</span></span>&nbsp;&nbsp;&nbsp;<span class="old-price">0￥</span></p>
+					</div>
+					<div class="card-craft">
+						<!--<p>彩色PVC&nbsp;&nbsp;|&nbsp;&nbsp;立金&nbsp;&nbsp;|&nbsp;&nbsp;背面卡号</p>-->
+						<p>3D打印</p>
+					</div>
+				</div>
+				<div class="card-slogan">
+					我的激情 我们的目标
+				</div>
+			</div>
+		</script>
+		<script type="text/x-handlebars-template" id="ran-series-4-tpl">
+			<!--燃系列4-->
+			<div id="ran-series-4">
+				<div class="card">
+					<div class="card-cover">
+						<img src="img/updetailqiu.png" />
+					</div>
+					<div class="card-apply">
+						<a href="https://xyk.cebbank.com/cebmms/apply/ps/card-index.htm?req_card_id=13351&pro_code=SJDMK&c2c_recom_flag="><img src="img/btn_apply.png" /></a>
+					</div>
+					<div class="card-price">
+						<p>制卡费：<span class="old-price-for-line"><span class="old-price">50￥</span></span>&nbsp;&nbsp;&nbsp;<span class="old-price">0￥</span></p>
+					</div>
+					<div class="card-craft">
+						<p>FOIL&nbsp;&nbsp;|&nbsp;&nbsp;立金&nbsp;&nbsp;|&nbsp;&nbsp;烫印</p>
+					</div>
+				</div>
+				<div class="card-slogan">
+					无竞技 不兄弟
+				</div>
+			</div>
+		</script>
+		<script type="text/x-handlebars-template" id="ran-series-5-tpl">
+			<!--燃系列5-->
+			<div id="ran-series-5">
+				<!--<div class="card card-up01">
+					<div class="card-apply">
+						<a href=""><img src="img/btn_apply.png" /></a>
+					</div>
+					<div class="card-price">
+						<p>制卡费：<span class="old-price-for-line"><span class="old-price">50￥</span></span>&nbsp;&nbsp;&nbsp;<span class="old-price">0￥</span></p>
+					</div>
+					<div class="card-craft">
+						<p>贝壳&nbsp;&nbsp;|&nbsp;&nbsp;立金&nbsp;&nbsp;|&nbsp;&nbsp;浮雕</p>
+					</div>
+					<div class="card-cover">
+						<img src="img/up01.png" />
+					</div>
+				</div>-->
+				<div class="card card-up02">
+					<div class="card-cover">
+						<img src="img/up01.png" />
+					</div>
+					<div class="card-apply">
+						<a href=""><img src="img/btn_apply.png" /></a>
+					</div>
+					<div class="card-price">
+						<p>制卡费：<span class="old-price-for-line"><span class="old-price">50￥</span></span>&nbsp;&nbsp;&nbsp;<span class="old-price">0￥</span></p>
+					</div>
+					<div class="card-craft">
+						<!--<p>黄绿色PVC&nbsp;&nbsp;|&nbsp;&nbsp;立金&nbsp;&nbsp;|&nbsp;&nbsp;夜光</p>-->
+						<p>3D打印</p>
+					</div>
+				</div>
+				<div class="card-slogan">
+					今天你有好好学习了么?
+				</div>
+			</div>
+		</script>
+		<script type="text/x-handlebars-template" id="xing-series-1-tpl">
+			<!--星系列1-->
+			<div id="xing-series-1">
+				<div class="card">
+					<!--<div class="card-control left">
+						<img src="img/arrow-left.png" />
+					</div>-->
+					<div class="card-cover">
+						<div class="swiper-container swiper-container-xing1">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide" data-name="白羊座"><img src="img/xing_baiyang.png" /></div>
+								<div class="swiper-slide" data-name="金牛座"><img src="img/xing_jinniu.png" /></div>
+								<div class="swiper-slide" data-name="双子座"><img src="img/xing_shuangzi.png" /></div>
+								<div class="swiper-slide" data-name="巨蟹座"><img src="img/xing_juxie.png" /></div>
+								<div class="swiper-slide" data-name="狮子座"><img src="img/xing_shizi.png" /></div>
+								<div class="swiper-slide" data-name="处女座"><img src="img/xing_chunv.png" /></div>
+								<div class="swiper-slide" data-name="天枰座"><img src="img/xing_tianping.png" /></div>
+								<div class="swiper-slide" data-name="天蝎座"><img src="img/xing_tianxie.png" /></div>
+								<div class="swiper-slide" data-name="射手座"><img src="img/xing_sheshou.png" /></div>
+								<div class="swiper-slide" data-name="摩羯座"><img src="img/xing_mojie.png" /></div>
+								<div class="swiper-slide" data-name="水瓶座"><img src="img/xing_shuiping.png" /></div>
+								<div class="swiper-slide" data-name="双鱼座"><img src="img/xing_shuangyu.png" /></div>
+							</div>
+						</div>
+					</div>
+					<!--<div class="card-control right">
+						<img src="img/arrow-right.png" />
+					</div>-->
+					<div class="card-title">
+						<!--我是<br /> [ <span class="constellation"></span> ]-->
+					</div>
+					<div class="card-apply">
+						<a href=""><img src="img/btn_apply.png" /></a>
+					</div>
+					<div class="card-price">
+						<p>制卡费：<span class="old-price-for-line"><span class="old-price">50￥</span></span>&nbsp;&nbsp;&nbsp;<span class="old-price">0￥</span></p>
+					</div>
+					<div class="card-craft">
+						<p>黑芯FOIL&nbsp;&nbsp;|&nbsp;&nbsp;立金&nbsp;&nbsp;|&nbsp;&nbsp;正面卡号</p>
+					</div>
+				</div>
+				<div class="card-slogan">
+					以雅典娜的名义 守护你
+				</div>
+			</div>
+		</script>
+		<script type="text/x-handlebars-template" id="xing-series-2-tpl">
+			<!--星系列2-->
+			<div id="xing-series-2">
+				<div class="card">
+					<!--<div class="card-control left">
+						<img src="img/left.png" />
+					</div>-->
+					<div class="card-cover">
+						<div class="swiper-container swiper-container-xing2">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide" data-name="狮子座"><img src="img/blackcard1.png" /></div>
+								<div class="swiper-slide" data-name="巨蟹座"><img src="img/blackcard2.png" /></div>
+								<div class="swiper-slide" data-name="双子座"><img src="img/blackcard3.png" /></div>
+							</div>
+						</div>
+					</div>
+					<!--<div class="card-control right">
+						<img src="img/right.png" />
+					</div>-->
+					<div class="card-title">
+						<!--[ <span class="constellation"></span> ]-->
+					</div>
+					<div class="card-apply">
+						<a href=""><img src="img/btn_apply.png" /></a>
+					</div>
+					<div class="card-price">
+						<p>制卡费：<span class="old-price-for-line"><span class="old-price">50￥</span></span>&nbsp;&nbsp;&nbsp;<span class="old-price">0￥</span></p>
+					</div>
+					<div class="card-craft">
+						<p>FOIL&nbsp;&nbsp;|&nbsp;&nbsp;立金&nbsp;&nbsp;|&nbsp;&nbsp;背面卡号</p>
+					</div>
+				</div>
+				<div class="card-slogan">
+					黑夜白星, 你最闪亮, <br />你是那夜空中最闪亮的星
+				</div>
+			</div>
+		</script>
+		<script type="text/x-handlebars-template" id="xing-series-3-tpl">
+			<!--星系列3-->
+			<div id="xing-series-3">
+				<div class="card">
+					<!--<div class="card-control left">
+						<img src="img/left.png" />
+					</div>-->
+					<div class="card-cover">
+						<div class="swiper-container swiper-container-xing3">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide" data-name="双子座"><img src="img/whitecard1.png" /></div>
+								<div class="swiper-slide" data-name="巨蟹座"><img src="img/whitecard2.png" /></div>
+								<div class="swiper-slide" data-name="狮子座"><img src="img/whitecard3.png" /></div>
+							</div>
+						</div>
+					</div>
+					<!--<div class="card-control right">
+						<img src="img/right.png" />
+					</div>-->
+					<div class="card-title">
+						<!--[ <span class="constellation"></span> ]-->
+					</div>
+					<div class="card-apply">
+						<a href=""><img src="img/btn_apply.png" /></a>
+					</div>
+					<div class="card-price">
+						<p>制卡费：<span class="old-price-for-line"><span class="old-price">50￥</span></span>&nbsp;&nbsp;&nbsp;<span class="old-price">0￥</span></p>
+					</div>
+					<div class="card-craft">
+						<p>FOIL&nbsp;&nbsp;|&nbsp;&nbsp;立金&nbsp;&nbsp;|&nbsp;&nbsp;背面卡号</p>
+					</div>
+				</div>
+				<div class="card-slogan">
+					黑夜白星, 你最闪亮, <br />你是那夜空中最闪亮的星
+				</div>
+			</div>
+		</script>
+		<script type="text/x-handlebars-template" id="meng-series-1-tpl">
+			<!--萌系列1-->
+			<div id="meng-series-1">
+				<div class="card c01">
+					<div class="card-cover">
+						<img src="img/cat_line.png" style="position: absolute;left: 12%;top: -15%;z-index: -1;">
+						<img src="img/cat.png" />
+					</div>
+					<div class="card-apply">
+						<a href=""><img src="img/btn_apply.png" /></a>
+					</div>
+				</div>
+				<div class="card c02">
+					<div class="card-cover">
+						<img src="img/bopu_dog.png" />
+						<img src="img/bopu_dog_line.png" style="width: 22%;position:  absolute;top: 49%;right: -2%;z-index:  -1;transform: rotate(20deg);-webkit-transform: rotate(20deg);">
+					</div>
+					<div class="card-apply">
+						<a href=""><img src="img/btn_apply.png" /></a>
+					</div>
+				</div>
+				<div class="card c03">
+					<div class="card-cover">
+						<img src="img/dog_line.png" style="width: 30%;position: absolute;top: -23%;left: 9%;z-index: -1;transform: rotate(56deg);-webkit-transform: rotate(56deg);">
+						<img src="img/dog.png" />
+					</div>
+					<div class="card-apply">
+						<a href=""><img src="img/btn_apply.png" /></a>
+					</div>
+				</div>
+				<div class="card c04">
+					<div class="card-cover">
+						<img src="img/zhuobie_dog_line.png" style="width: 38%;position: absolute;top: -18%;right: 10%;z-index: -1;transform: rotate(55deg);-webkit-transform: rotate(55deg);">
+						<img src="img/zhuobie_dog.png" />
+					</div>
+					<div class="card-apply">
+						<a href=""><img src="img/btn_apply.png" /></a>
+					</div>
+				</div>
+				<div class="card c05">
+					<div class="card-cover">
+						<!--<img src="img/heben_cat_line.png" style="position:  absolute;left: 30%;top: -20%;z-index: -1;width: 42%;transform: rotate(25deg);-webkit-transform: rotate(25deg);">-->
+						<img src="img/heben_cat_line.png" style="position:  absolute;left: 30%;top: -12%;z-index: -1;width: 40%;transform: rotate(25deg);-webkit-transform: rotate(33deg);">
+						<img src="img/heben_cat.png" />
+					</div>
+					<div class="card-apply">
+						<a href=""><img src="img/btn_apply.png" /></a>
+					</div>
+				</div>
+				<div class="card c06">
+					<div class="card-price">
+						<p>制卡费：<span class="old-price-for-line"><span class="old-price">50￥</span></span>&nbsp;&nbsp;&nbsp;<span class="old-price">0￥</span></p>
+					</div>
+					<div class="card-craft">
+						<p>透明&nbsp;&nbsp;|&nbsp;&nbsp;立金&nbsp;&nbsp;|&nbsp;&nbsp;背面卡号</p>
+					</div>
+				</div>
+				<div class="card-slogan">
+					你们想我戴上谁的帽子
+				</div>
+			</div>
+		</script>
+		<script type="text/x-handlebars-template" id="meng-series-2-tpl">
+			<!--萌系列2-->
+			<div id="meng-series-2">
+				<div class="card">
+					<div class="card-cover">
+						<!--主系列滑动列表-->
+						<div class="swiper-container swiper-container-meng2">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide"><img src="img/cardredduck.png" /></div>
+								<div class="swiper-slide"><img src="img/cardblackduck.png" /></div>
+								<div class="swiper-slide"><img src="img/carddog.png" /></div>
+								<div class="swiper-slide"><img src="img/cardduck.png" /></div>
+							</div>
+						</div>
+					</div>
+					<div class="card-apply">
+						<a href=""><img src="img/btn_apply.png" /></a>
+					</div>
+					<div class="card-price">
+						<p>制卡费：<span class="old-price-for-line"><span class="old-price">50￥</span></span>&nbsp;&nbsp;&nbsp;<span class="old-price">0￥</span></p>
+					</div>
+					<div class="card-craft">
+						<p>透明&nbsp;&nbsp;|&nbsp;&nbsp;立金&nbsp;&nbsp;|&nbsp;&nbsp;背面卡号</p>
+					</div>
+				</div>
+				<div class="card-slogan">
+					我的名气 只为博你一笑
+				</div>
+			</div>
+		</script>
+		<script type="text/x-handlebars-template" id="meng-series-3-tpl">
+			<!--萌系列3-->
+			<div id="meng-series-3">
+				<div class="card bear1">
+					<div class="card-cover">
+						<img src="img/family_bear_1.png" />
+					</div>
+					<div class="card-apply">
+						<a href=""><img src="img/btn_apply.png" /></a>
+					</div>
+					<div class="card-price">
+						<p>制卡费：<span class="old-price-for-line"><span class="old-price">50￥</span></span>&nbsp;&nbsp;&nbsp;<span class="old-price">0￥</span></p>
+					</div>
+					<div class="card-craft">
+						<p>彩色PVC&nbsp;&nbsp;|&nbsp;&nbsp;珠光&nbsp;&nbsp;|&nbsp;&nbsp;浮雕油墨</p>
+					</div>
+				</div>
+				<div class="card bear2">
+					<div class="card-cover">
+						<img src="img/family_bear_2.png" />
+					</div>
+					<div class="card-apply">
+						<a href=""><img src="img/btn_apply.png" /></a>
+					</div>
+					<div class="card-price">
+						<p>制卡费：<span class="old-price-for-line"><span class="old-price">50￥</span></span>&nbsp;&nbsp;&nbsp;<span class="old-price">0￥</span></p>
+					</div>
+					<div class="card-craft">
+						<p>彩色PVC&nbsp;&nbsp;|&nbsp;&nbsp;珠光&nbsp;&nbsp;|&nbsp;&nbsp;浮雕油墨</p>
+					</div>
+				</div>
+				<div class="card-slogan">
+					我们的星球 我们的自由
+				</div>
+			</div>
+		</script>
+		<script type="text/x-handlebars-template" id="meng-series-4-tpl">
+			<!--萌系列4-->
+			<div id="meng-series-4">
+				<div class="card bear1">
+					<div class="card-cover">
+						<img src="img/image_bear-1.png" />
+					</div>
+					<div class="card-apply">
+						<a href=""><img src="img/btn_apply.png" /></a>
+					</div>
+					<div class="card-price">
+						<p>制卡费：<span class="old-price-for-line"><span class="old-price">50￥</span></span>&nbsp;&nbsp;&nbsp;<span class="old-price">0￥</span></p>
+					</div>
+					<div class="card-craft">
+						<p>彩色PVC&nbsp;&nbsp;|&nbsp;&nbsp;立金&nbsp;&nbsp;|&nbsp;&nbsp;浮雕油墨</p>
+					</div>
+				</div>
+				<div class="card bear2">
+					<div class="card-cover">
+						<img src="img/image_bear-2.png" />
+					</div>
+					<div class="card-apply">
+						<a href=""><img src="img/btn_apply.png" /></a>
+					</div>
+					<div class="card-price">
+						<p>制卡费：<span class="old-price-for-line"><span class="old-price">50￥</span></span>&nbsp;&nbsp;&nbsp;<span class="old-price">0￥</span></p>
+					</div>
+					<div class="card-craft">
+						<p>彩色PVC&nbsp;&nbsp;|&nbsp;&nbsp;立金&nbsp;&nbsp;|&nbsp;&nbsp;浮雕油墨</p>
+					</div>
+				</div>
+				<div class="card bear3">
+					<div class="card-cover">
+						<img src="img/image_bear-3.png" />
+					</div>
+					<div class="card-apply">
+						<a href=""><img src="img/btn_apply.png" /></a>
+					</div>
+					<div class="card-price">
+						<p>制卡费：<span class="old-price-for-line"><span class="old-price">50￥</span></span>&nbsp;&nbsp;&nbsp;<span class="old-price">0￥</span></p>
+					</div>
+					<div class="card-craft">
+						<p>彩色PVC&nbsp;&nbsp;|&nbsp;&nbsp;立金&nbsp;&nbsp;|&nbsp;&nbsp;浮雕油墨</p>
+					</div>
+				</div>
+				<div class="card-slogan">
+					相遇 便是奇妙而美好的缘分
+				</div>
+			</div>
+		</script>
+		<!--mui-->
+		<script src="js/mui.js"></script>
+		<!--jquery-->
+		<script src="js/jquery-3.3.1.js"></script>
+		<!--iSlider-->
+		<script src="lib/iSlider/js/iSlider.js"></script>
+		<script src="lib/iSlider/js/ext/animate.js"></script>
+		<script src="lib/iSlider/js/plugins/dot.js"></script>
+		<script src="lib/iSlider/js/plugins/button.js"></script>
+		<!--<script src="lib/iSlider/js/plugins/zoompic.js"></script>-->
+		<script src="lib/iSlider/js/plugins/BIZone.js"></script>
+		<!--swiper4-->
+		<script src="lib/swiper4/js/swiper.js"></script>
+		<!--公有js-->
+		<script src="js/public.js"></script>
+		<!--私有js-->
+		<script src="js/ProductDetail.js"></script>
+	</body>
+
+</html>

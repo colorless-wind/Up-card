@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<script src="js/jquery-3.3.1.js"></script>
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link href="css/jquery.mobile.custom.structure.css" rel="stylesheet" />
+		<link href="css/jquery.mobile.custom.theme.css" rel="stylesheet" />
+		<script type="text/javascript" charset="utf-8">
+		</script>
+		<style type="text/css">
+			html,
+			body {
+				height: 100%;
+				overflow: hidden;
+			}
+			
+			body {
+				background-image: url(img/up_bk.jpg);
+				background-size: cover;
+				background-repeat: no-repeat;
+				/*animation: fadein 1s both ease-in;*/
+			}
+			
+			.zoomIn {
+				animation: zoomIn 0.3s both ease-in;
+				/*animation-delay: 0.5s;*/
+			}
+			
+			.fadeIn {
+				animation: fadein 0.5s both ease-in;
+				/*animation-delay: 1.5s;*/
+			}
+			
+			.fadeOut {
+				animation: fadeout 1s both ease-in;
+			}
+			
+			.up-logo {
+				width: 90%;
+				position: absolute;
+				top: 20%;
+				left: 5%;
+			}
+			
+			.operation-guide {
+				width: 100%;
+				height: 100%;
+				position: relative;
+				z-index: 2;
+			}
+			
+			.up-index0 {
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				/*display: none;*/
+				/*animation: show 1s both ease-in;
+				animation-delay: 1s;*/
+				z-index: -2;
+			}
+			
+			.up-index1 {
+				z-index: -1;
+				animation: fadeout 1s both ease-in;
+				animation-delay: 1s;
+			}
+			
+			.up-index2 {
+				z-index: -2;
+				/*animation: fadeout 1s both ease-in;
+				animation-delay: 1s;*/
+			}
+			
+			.up-index3 {
+				/*z-index: -3;*/
+				animation: fadeinright 1s both ease-in;
+				/*animation-delay: 0.5s;*/
+			}
+		</style>
+		<style type="text/css">
+			/*出现*/
+			
+			@keyframes show {
+				0% {
+					display: block;
+				}
+				100% {
+					display: block;
+				}
+			}
+			
+			@-webkit-keyframes show {
+				0% {
+					display: block;
+				}
+				100% {
+					display: block;
+				}
+			}
+			/*淡入*/
+			
+			@keyframes fadein {
+				0% {
+					opacity: 0;
+				}
+				100% {
+					opacity: 1;
+				}
+			}
+			
+			@-webkit-keyframes fadein {
+				0% {
+					opacity: 0;
+				}
+				100% {
+					opacity: 1;
+				}
+			}
+			/*淡出*/
+			
+			@keyframes fadeout {
+				0% {
+					opacity: 1;
+				}
+				100% {
+					opacity: 0;
+				}
+			}
+			
+			@-webkit-keyframes fadeout {
+				0% {
+					opacity: 1;
+				}
+				100% {
+					opacity: 0;
+				}
+			}
+			
+			@keyframes fadeinright {
+				0% {
+					/*position: relative;*/
+					left: 50px;
+					top: 50px;
+					opacity: 0;
+				}
+				100% {
+					/*position: relative;*/
+					left: 0px;
+					top: 0px;
+					opacity: 1;
+				}
+			}
+			
+			@-webkit-keyframes fadeinright {
+				0% {
+					/*position: relative;*/
+					left: 50px;
+					top: 50px;
+					opacity: 0;
+				}
+				100% {
+					/*position: relative;*/
+					left: 0px;
+					top: 0px;
+					opacity: 1;
+				}
+			}
+			
+			@keyframes zoomIn {
+				0% {
+					z-index: 1;
+					webkit-transform: scale3d(0, 0, 0);
+					transform: scale3d(0, 0, 0);
+					opacity: 0;
+				}
+				100% {
+					z-index: -2;
+					webkit-transform: scale3d(1, 1, 1);
+					transform: scale3d(1, 1, 1);
+					opacity: 1;
+				}
+			}
+			
+			@-webkit-keyframes zoomIn {
+				0% {
+					z-index: 1;
+					opacity: 0.8;
+					webkit-transform: scale3d(0.2, 0.2, 0.2);
+					transform: scale3d(0.2, 0.2, 0.2);
+				}
+				100% {
+					z-index: -2;
+					opacity: 1;
+					webkit-transform: scale3d(1, 1, 1);
+					transform: scale3d(1, 1, 1);
+				}
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<video style="opacity: 0;position: relative;z-index: 1;" x-webkit-airplay="true" webkit-playsinline preload="true">
+			<source src="movie/UP.Ogg" type="video/ogg"></source>
+			<source src="movie/UP-full.mp4" type="video/mp4"></source>
+			当前浏览器不支持 video直接播放，点击这里下载视频：
+			<a href="myvideo.webm">下载视频</a>
+		</video>
+
+		<!--<img src="img/up_index.png" id="up-index" class="up-index0 up-index1" />
+		<img src="img/up_index_2.png" id="up-index" class="up-index0 up-index2" />
+		<img src="img/up_index_3.gif" id="up-index" class="up-index0 up-index3" />-->
+		<!--<script src="js/mui.js"></script>-->
+		<script src="js/jquery-3.3.1.js"></script>
+		<script src="js/jquery.mobile.custom.js"></script>
+		<script type="text/javascript">
+			$('video').width($(window).width());
+			$('video').height($(window).height());
+			var music = new Audio('movie/up.mp3');
+			//				$('body').append('<img src="img/up_logo.png" class="up-logo zoomIn" />');
+			//$('body').append('<img src="img/up_index_3.gif" id="up-index" class="up-index0 up-index3" />');
+			//$('body').append('<img src="img/operation_guide.gif" class="operation-guide fadeIn" />');
+			//$('.up-logo').addClass('fadeOut');
+			//$('.up-logo').width($('.up-logo').width());
+			//				$('.up-logo').addClass('fadeIn');
+			music.load()
+			$('video').css('opacity', 1);
+			$('video')[0].play();
+			music.play()
+
+			$('.up-logo').hide();
+			setTimeout(function() {
+				$('body').append('<img src="img/operation_guide.gif" class="operation-guide fadeIn" />');
+				$('video').hide();
+			}, 3950)
+
+			$(document).on('touchmove', '.operation-guide', function() {
+				location.href = 'MainMenu.html'
+			})
+		</script>
+	</body>
+
+</html>

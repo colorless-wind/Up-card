@@ -1,0 +1,95 @@
+html,
+body {
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+}
+
+body {
+	background-image: url(../img/product_bk.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.mui-content {
+	background: none;
+	height: 100%;
+}
+
+.menus {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	text-align: center;
+	z-index: 99;
+}
+
+.menus .new-btn img {
+	width: 53px;
+	height: 23px;
+	position: fixed;
+	bottom: 20px;
+	left: 18px;
+	z-index: 99;
+}
+
+.menus .me-btn img {
+	width: 37px;
+	height: 23px;
+	position: fixed;
+	bottom: 20px;
+	right: 12px;
+	z-index: 99;
+}
+
+.menus .product-btn img {
+	width: 38px;
+	position: fixed;
+	bottom: 20px;
+	left: 48%;
+	z-index: 99;
+}
+
+.first-page {
+	width: 100%;
+	height: 100%;
+}
+
+.menus-right-bar {
+	position: fixed;
+	right: 0;
+	z-index: 99;
+	top: 35%;
+}
+
+.menus-right-bar img {
+	width: 30px;
+}
+
+#coverflow {
+	width: 100%;
+	height: 100%;
+	padding: 30px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+#coverflow img {
+	width: 90%;
+	height: 20%;
+	/*border: 1px solid #999;*/
+	float: left;
+	position: relative;
+	margin: 5px;
+}
+
+div.wrapper {
+	width: 90%;
+	height: 100%;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	left: 5%;
+}

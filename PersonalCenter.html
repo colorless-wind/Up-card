@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>个人中心</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="css/mui.min.css">
+
+		<style type="text/css">
+			html,
+			body {
+				height: 100%;
+				overflow: hidden;
+			}
+			
+			body {
+				background-image: url(img/bg_light.png);
+				background-size: cover;
+				background-repeat: no-repeat;
+			}
+			
+			.nav-space {
+				padding-top: 15px;
+			}
+			
+			.nav-bar {
+				background-image: url(img/top.jpg);
+				background-size: 116.5%;
+				background-repeat: no-repeat;
+				min-height: 50px;
+			}
+			
+			.nav-bar h2 {
+				margin: 0;
+				font-family: "微软雅黑";
+				text-align: center;
+				font-weight: 100;
+				font-size: 1.6rem;
+				color: white;
+				line-height: 50px;
+			}
+			
+			.nav-bar .nav-bar-img {
+				width: 30px;
+				position: absolute;
+				top: 25px;
+			}
+			
+			.nav-bar .nav-bar-img-left {
+				left: 20px;
+			}
+			
+			.nav-bar .nav-bar-img-right {
+				right: 20px;
+			}
+			
+			.mui-content {
+				background: none;
+			}
+			
+			.mui-grid-view.mui-grid-9 {
+				background: none;
+				/*padding: 30px 10px;*/
+			}
+			
+			.mui-grid-view .grid-img {
+				width: 43px;
+				height: 38px;
+			}
+			
+			.mui-table-view.mui-grid-view .mui-table-view-cell .mui-media-body {
+				color: white;
+			}
+			
+			.mui-grid-view.mui-grid-9 .mui-table-view-cell {
+				/*border: none;*/
+			}
+			
+			.personal-info {
+				height: 106px;
+				text-align: center;
+				padding-top: 8px;
+				background-color: white;
+			}
+			
+			.personal-info .avatar {
+				width: 66px;
+			}
+			
+			.personal-info .username {
+				color: #9084a3;
+				font-family: "微软雅黑";
+			}
+		</style>
+	</head>
+
+	<body>
+		<nav class="nav-bar nav-space">
+			<img class="nav-bar-img nav-bar-img-left go-back" src="img/back.png">
+			<h2>个人中心</h2>
+			<a href="SearchCenter.html"><img class="nav-bar-img nav-bar-img-right" src="img/search_right.png"></a>
+		</nav>
+
+		<div class="mui-content">
+			<div class="personal-info">
+				<img src="img/touxiang.png" class="avatar" />
+				<p class="username">请点击登录</p>
+			</div>
+			<ul class="mui-table-view mui-grid-view mui-grid-9">
+				<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4">
+					<a href="#">
+						<img src="img/zhanghu.png" class="grid-img" />
+						<div class="mui-media-body">我的账户</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4">
+					<a href="#">
+						<img src="img/touzi.png" class="grid-img" />
+						<div class="mui-media-body">我的投资</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4" style="border-right: none;">
+					<a href="#">
+						<img src="img/youhui.png" class="grid-img" style="height: 28px;margin-bottom: 10px;" />
+						<div class="mui-media-body">我的优惠</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4">
+					<a href="#">
+						<img src="img/jifen.png" class="grid-img" style="width: 35px;" />
+						<div class="mui-media-body">我的积分</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4">
+					<a href="#">
+						<img src="img/anquan.png" class="grid-img" />
+						<div class="mui-media-body">安全设置</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4" style="border-right: none;">
+					<a href="#">
+						<img src="img/pay.png" class="grid-img" style="width: 30px;" />
+						<div class="mui-media-body">支付管理</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4" style="">
+					<a href="#">
+						<img src="img/iphonebank.png" class="grid-img" style="width: 30px;" />
+						<div class="mui-media-body">手机银行管理</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4" style="border: none;border-bottom: 1px solid white;border-right: 1px solid white;height: 109px;">
+				</li>
+				<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4" style="border-right: none;">
+					<a href="#">
+						<img src="img/kefu.png" class="grid-img" />
+						<div class="mui-media-body">在线客服</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+
+		<script src="js/mui.js"></script>
+		<script src="js/jquery-3.3.1.js"></script>
+		<script>
+			$('.username').on('tap', function() {
+				location.href = 'login.html';
+			})
+
+			$('.go-back').on('tap', function() {
+				history.back();
+			})
+		</script>
+	</body>
+
+</html>

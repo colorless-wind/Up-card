@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>聚合菜单</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+		<meta name="apple-mobile-web-app-status-bar-style" content="#0d0d3f">
+		<!--mui-->
+		<link rel="stylesheet" href="css/mui.min.css">
+		<!--iSlider-->
+		<link rel="stylesheet" href="lib/iSlider/style/iSlider.css" />
+		<!--public-->
+		<link rel="stylesheet" href="css/public.css">
+		<!--私有css-->
+		<link rel="stylesheet" href="css/MainMenu.css">
+	</head>
+
+	<body>
+		
+		<div>
+			<!--up anime1-->
+			<video id="up-video1" style="opacity: 0;position: relative;z-index: 1;" x-webkit-airplay="true" webkit-playsinline preload="true" autobuffer>
+				<source src="movie/UP1.Ogg" type="video/ogg"></source>
+				<source src="movie/UP1.mp4" type="video/mp4"></source>
+				<a href="myvideo.webm">下载视频</a>
+			</video>
+			<!--up anime2-->
+			<video id="up-video2" style="opacity: 0;position: absolute;top:0;z-index: 3;" x-webkit-airplay="true" webkit-playsinline preload="true" autobuffer>
+				<source src="movie/UP2.Ogg" type="video/ogg"></source>
+				<source src="movie/UP2.mp4" type="video/mp4"></source>
+				当前浏览器不支持 video直接播放，点击这里下载视频：
+				<a href="myvideo.webm">下载视频</a>
+			</video>
+			<!--welcome anime2-->
+			<video id="welcome-video" style="opacity: 0;position: absolute;top:0;z-index: 2;" x-webkit-airplay="true" webkit-playsinline preload="true" autobuffer>
+				<source src="movie/up.Ogg" type="video/ogg"></source>
+				<source src="movie/up.mp4" type="video/mp4"></source>
+				<!--<source src="movie/welcome.mov"></source>-->0 当前浏览器不支持 video直接播放，点击这里下载视频：
+				<a href="myvideo.webm">下载视频</a>
+			</video>
+		</div>
+		
+		<div class="mui-content" id="iSlider-wrapper">
+			<!--菜单项-->
+			<div class="mui-row menus">
+				<div class="mui-col-xs-4 mui-col-sm-4">
+					<div class="new-btn">
+						<img src="img/120.png" />
+					</div>
+				</div>
+				<div class="mui-col-xs-4 mui-col-sm-4">
+
+					<div class="product-btn">
+						<img src="img/666.png" />
+					</div>
+				</div>
+				<div class="mui-col-xs-4 mui-col-sm-4">
+					<div class="me-btn">
+						<img src="img/216.png" />
+					</div>
+				</div>
+			</div>
+			<!--口号-->
+			<!--<div class="menus-slogan">
+				<img src="img/slogan.png" />
+			</div>-->
+			<!--右侧功能按钮-->
+			<a href="https://xyk.cebbank.com/cebmms/apply/ps/card-list.htm?pro_code=" class="search-btn"><img src="img/search_right.png" /></a>
+			<div class="menus-right-bar">
+				<a class="attention-btn"><img src="img/attention.png" /></a>
+				<p>关注</p>
+				<br />
+				<a class="zan-btn" data-switch="on"><img src="img/zan_right.png" /></a>
+				<p>47.6<span>w</span></p>
+				<br />
+				<a class="share-btn"><img src="img/share_right.png" /></a>
+				<p>1127</p>
+			</div>
+			<a class="melody-btn"><img src="img/music.png" /></a>
+			<a class="music-btn"><img src="img/icon_up.png" /></a>
+		</div>
+
+		<!--mui-->
+		<script src="js/mui.js"></script>
+		<!--jquery-->
+		<script src="js/jquery-3.3.1.js"></script>
+		<!--iSlider-->
+		<script src="lib/iSlider/js/iSlider.js"></script>
+		<script src="lib/iSlider/js/ext/animate.js"></script>
+		<script src="lib/iSlider/js/plugins/dot.js"></script>
+		<script src="lib/iSlider/js/plugins/button.js"></script>
+		<!--<script src="lib/iSlider/js/plugins/zoompic.js"></script>-->
+		<script src="lib/iSlider/js/plugins/BIZone.js"></script>
+		<!--公有js-->
+		<script src="js/public.js"></script>
+		<!--私有js-->
+		<script src="js/MainMenu.js"></script>
+	</body>
+
+</html>

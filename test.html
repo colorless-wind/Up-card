@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>test</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+		<meta name="apple-mobile-web-app-status-bar-style" content="#0d0d3f">
+		<!--mui-->
+		<link rel="stylesheet" href="css/mui.min.css">
+		<!--iSlider-->
+		<link rel="stylesheet" href="lib/iSlider/style/iSlider.css" />
+		<!--swiper4-->
+		<link rel="stylesheet" href="lib/swiper4/css/swiper.css" />
+		<!--public-->
+		<link rel="stylesheet" href="css/public.css">
+		<!--私有css-->
+		<link rel="stylesheet" href="css/MainMenu.css">
+
+		<style type="text/css">
+			/* xing-series-3 */
+			
+			#xing-series-3 {
+				width: 100%;
+				height: 100%;
+				background-image: url(img/xing_bg.png);
+				background-repeat: no-repeat;
+				background-size: 100% 100%;
+				background-color: black;
+			}
+			
+			#xing-series-3 .card {
+				width: 100%;
+				position: absolute;
+				top: 21%;
+				/*left: -5%;*/
+			}
+			
+			#xing-series-3 .card .card-cover {
+				width: 100%;
+				text-align: center;
+				display: inline-block;
+			}
+			
+			#xing-series-3 .card .card-control.left {
+				text-align: center;
+				display: inline-block;
+				position: absolute;
+				top: 25%;
+				left: 10%;
+				z-index: 99;
+			}
+			
+			#xing-series-3 .card .card-control.left img {
+				width: 60%;
+			}
+			
+			#xing-series-3 .card .card-control.right {
+				text-align: center;
+				display: inline-block;
+				position: absolute;
+				top: 25%;
+				right: 10%;
+				z-index: 99;
+			}
+			
+			#xing-series-3 .card .card-control.right img {
+				width: 60%;
+			}
+			
+			#xing-series-3 .card .card-cover img {
+				width: 130%;
+			}
+			
+			#xing-series-3 .card .card-title {
+				font-size: 0.75rem;
+				width: 100%;
+				text-align: center;
+				color: white;
+			}
+			
+			#xing-series-3 .card .card-title .constellation {
+				font-size: 1rem;
+			}
+			
+			#xing-series-3 .card .card-apply {
+				margin-top: 28%;
+				width: 100%;
+				text-align: center;
+			}
+			
+			#xing-series-3 .card .card-apply img {
+				width: 40%;
+			}
+			
+			#xing-series-3 .card .card-price p {
+				color: white;
+				text-align: center;
+				font-size: 0.65rem;
+				margin-bottom: 5px;
+			}
+			
+			#xing-series-3 .card .card-price p .old-price-for-line {
+				color: red;
+				/*text-decoration: line-through;*/
+			}
+			
+			#xing-series-3 .card .card-price p .old-price-for-line .old-price {
+				color: white;
+			}
+			
+			#xing-series-3 .card .card-price p .new-price {
+				display: none;
+			}
+			
+			#xing-series-3 .card .card-craft p {
+				color: #d0c5c9;
+				text-align: center;
+				font-size: 0.65rem;
+			}
+			
+			#xing-series-3 .card-slogan {
+				font-family: "微软雅黑";
+				font-size: 0.8rem;
+				color: white;
+				position: absolute;
+				bottom: 10%;
+				left: 5%;
+			}
+			
+			#xing-series-3 .swiper-container {
+				/*height: 330px;*/
+			}
+		</style>
+	</head>
+
+	<body>
+		<iframe id="re"  src="https://www.baidu.com" width="300" height="200"></iframe>
+		<div class="mui-content" id="iSlider-wrapper1">
+			<!--星系列3-->
+			<div id="xing-series-3">
+				<div class="card">
+					<!--<div class="card-control left">
+						<img src="img/left.png" />
+					</div>-->
+					<div class="card-cover">
+						<div class="swiper-container swiper-container-xing3">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide" data-name="双子座"><img src="img/whitecard1.png" /></div>
+								<div class="swiper-slide" data-name="巨蟹座"><img src="img/whitecard2.png" /></div>
+								<div class="swiper-slide" data-name="狮子座"><img src="img/whitecard3.png" /></div>
+							</div>
+						</div>
+					</div>
+					<!--<div class="card-control right">
+						<img src="img/right.png" />
+					</div>-->
+					<div class="card-title">
+						[ <span class="constellation"></span> ]
+					</div>
+					<div class="card-apply">
+						<a href=""><img src="img/btn_apply.png" /></a>
+					</div>
+					<div class="card-price">
+						<p>制卡费：<span class="old-price-for-line"><span class="old-price">88￥</span></span>&nbsp;&nbsp;&nbsp;<span class="new-price">0￥</span></p>
+					</div>
+					<div class="card-craft">
+						<p>FOIL&nbsp;&nbsp;|&nbsp;&nbsp;立金&nbsp;&nbsp;|&nbsp;&nbsp;背面卡号</p>
+					</div>
+				</div>
+				<div class="card-slogan">
+					黑夜白星, 你最闪亮, <br />你是那夜空中最闪亮的星
+				</div>
+			</div>
+			
+			
+			
+			<!--菜单项-->
+			<div class="mui-row menus">
+				<div class="mui-col-xs-4 mui-col-sm-4">
+					<div class="new-btn">
+						<img src="img/120.png" />
+					</div>
+				</div>
+				<div class="mui-col-xs-4 mui-col-sm-4">
+
+					<div class="product-btn">
+						<img src="img/666.png" />
+					</div>
+				</div>
+				<div class="mui-col-xs-4 mui-col-sm-4">
+					<div class="me-btn">
+						<img src="img/216.png" />
+					</div>
+				</div>
+			</div>
+			<!--右侧功能按钮-->
+			<a href="https://xyk.cebbank.com/cebmms/apply/ps/card-list.htm?pro_code=" class="search-btn"><img src="img/search_right.png" /></a>
+			<div class="menus-right-bar">
+				<a class="attention-btn"><img src="img/attention.png" /></a>
+				<p>关注</p>
+				<a class="zan-btn" data-switch="on"><img src="img/zan_right.png" /></a>
+				<p>47.6<span>w</span></p>
+				<a class="share-btn"><img src="img/share_right.png" /></a>
+				<p>1127</p>
+			</div>
+			<a class="melody-btn"><img src="img/music.png" /></a>
+			<a class="music-btn"><img src="img/icon_up.png" /></a>
+		</div>
+
+		<!--mui-->
+		<script src="js/mui.js"></script>
+		<!--jquery-->
+		<script src="js/jquery-3.3.1.js"></script>
+		<!--iSlider-->
+		<script src="lib/iSlider/js/iSlider.js"></script>
+		<script src="lib/iSlider/js/ext/animate.js"></script>
+		<script src="lib/iSlider/js/plugins/dot.js"></script>
+		<script src="lib/iSlider/js/plugins/button.js"></script>
+		<!--<script src="lib/iSlider/js/plugins/zoompic.js"></script>-->
+		<script src="lib/iSlider/js/plugins/BIZone.js"></script>
+		<!--swiper4-->
+		<script src="lib/swiper4/js/swiper.js"></script>
+		<!--公有js-->
+		<script src="js/public.js"></script>
+		<!--私有js-->
+		<script src="js/test.js"></script>
+
+		<script type="text/javascript">
+			mySwiper = new Swiper('#iSlider-wrapper1', {
+				direction: 'vertical',
+				loop: true,
+				effect: 'slide',
+				slidesPerView: 2.5,
+				centeredSlides: true,
+				//		setWrapperSize: true,
+				//				height: 200, //你的slide高度
+				//		autoHeight:true,
+				/*coverflowEffect: {
+					rotate: 1,
+					stretch: 0,
+					depth: 10,
+					modifier: 10,
+					slideShadows: false
+				},*/
+			})
+		</script>
+		<script type="text/javascript">
+	$('#re').contents()[0].location.reload()
+</script>
+	</body>
+
+</html>

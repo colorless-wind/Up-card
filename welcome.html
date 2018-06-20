@@ -1,0 +1,316 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<style type="text/css">
+			html,
+			body {
+				height: 100%;
+				overflow: hidden;
+			}
+			
+			body {
+				background-image: url(img/welcome_bk.png);
+				background-size: cover;
+				background-repeat: no-repeat;
+				/*padding-top: 40%;*/
+			}
+			
+			.content {
+				/*height: 100%;*/
+				padding-top: 70%;
+				padding-left: calc(50% - 4*1.8rem);
+				padding-right: calc(50% - 4*1.8rem);
+			}
+			
+			.up1 {
+				font-size: 1.8rem;
+				font-weight: normal;
+				letter-spacing: .1rem;
+				color: rgb(235, 5, 235);
+				position: relative;
+				top: -1.62rem;
+				left: 7.4rem;
+				z-index: -1;
+				animation: flash1 1s both ease-in;
+				animation-delay: 0.4s;
+			}
+			
+			.up2 {
+				font-size: 1.8rem;
+				font-weight: normal;
+				letter-spacing: .1rem;
+				color: rgb(0, 176, 240);
+				position: relative;
+				top: -2.82rem;
+				left: 7.79rem;
+				z-index: -1;
+				animation: flash2 1s both ease-in;
+				animation-delay: 0.4s;
+			}
+			
+			.title-h {
+				font-size: 1.8rem;
+				/*padding-top: 6%;*/
+				margin-bottom: 0;
+				padding-bottom: 0;
+				font-weight: normal;
+				letter-spacing: .1rem;
+				/*padding-left: 29.2%;*/
+				-webkit-animation: type 0.3s steps(50, end) forwards;
+				animation: type 0.3s steps(50, end) forwards;
+			}
+			
+			.title-h2 {
+				text-indent: 3.6rem;
+				position: relative;
+				top: -2.6rem;
+				-webkit-animation: type 1s steps(50, end) forwards;
+				animation: type 1s steps(50, end) forwards;
+			}
+			
+			.title-h3 {
+				animation: fadeout 0.4s linear;
+				text-align: center;
+			}
+			
+			.title-h4 {
+				animation: fadeout 0.4s linear;
+				text-align: center;
+				/*animation-delay: 0.8s;*/
+			}
+			
+			.title-h5 {
+				animation: fadeout 0.4s linear;
+				text-align: center;
+				/*animation-delay: 1.6s;*/
+			}
+			
+			.title-h6 {
+				font-size: 35rem;
+				animation: zoomIn 0.25s linear;
+				text-align: center;
+				/*animation-delay: 1.6s;*/
+			}
+			
+			.title-h7 {
+				font-size: 35rem;
+				animation: zoomIn 0.25s linear;
+				text-align: center;
+				/*animation-delay: 1.6s;*/
+			}
+			
+			.title-h8 {
+				font-size: 35rem;
+				animation: zoomIn 0.25s linear;
+				text-align: center;
+				/*animation-delay: 1.6s;*/
+			}
+			
+			.typing {
+				/*text-align: right;*/
+				color: white;
+				width: 100%;
+				white-space: nowrap;
+				overflow: hidden;
+			}
+			
+			.series {
+				font-size: 1.8rem;
+				margin: 0;
+				padding: 0;
+				font-weight: normal;
+				letter-spacing: .1rem;
+				text-align: center;
+				color: white;
+				line-height: 1.2;
+			}
+			
+			.series-number {
+				color: orange;
+			}
+			
+			.fadeIn {}
+			
+			@-webkit-keyframes type {
+				from {
+					width: 0;
+				}
+			}
+			
+			@keyframes type {
+				from {
+					width: 0;
+				}
+			}
+			
+			@keyframes flash1 {
+				0%,
+				33.3%,
+				66.7%,
+				to {
+					color: rgb(235, 5, 235);
+				}
+				16.6%,
+				49.9%,
+				83.3% {
+					color: purple;
+				}
+			}
+			
+			@-webkit-keyframes flash1 {
+				0%,
+				33.3%,
+				66.7%,
+				to {
+					color: rgb(235, 5, 235);
+				}
+				16.6%,
+				49.9%,
+				83.3% {
+					color: purple;
+				}
+			}
+			
+			@keyframes flash2 {
+				0%,
+				33.3%,
+				66.7%,
+				to {
+					color: rgb(0, 176, 240);
+				}
+				16.6%,
+				49.9%,
+				83.3% {
+					color: darkcyan;
+				}
+			}
+			
+			@-webkit-keyframes flash2 {
+				0%,
+				33.3%,
+				66.7%,
+				to {
+					color: rgb(0, 176, 240);
+				}
+				16.6%,
+				49.9%,
+				83.3% {
+					color: darkcyan;
+				}
+			}
+			
+			@keyframes fadeout {
+				0% {
+					opacity: 1;
+				}
+				100% {
+					opacity: 0;
+				}
+			}
+			
+			@-webkit-keyframes fadeout {
+				0% {
+					opacity: 1;
+				}
+				100% {
+					opacity: 0;
+				}
+			}
+			
+			@keyframes zoomIn {
+				0% {
+					webkit-transform: scale3d(0.3, 0.3, 0.3);
+					transform: scale3d(0.3, 0.3, 0.3);
+				}
+				100% {
+					webkit-transform: scale3d(5, 5, 5);
+					transform: scale3d(5, 5, 5);
+				}
+			}
+			
+			@-webkit-keyframes zoomIn {
+				0% {
+					webkit-transform: scale3d(1, 1, 1);
+					transform: scale3d(1, 1, 1);
+				}
+				100% {
+					webkit-transform: scale3d(5, 5, 5);
+					transform: scale3d(5, 5, 5);
+				}
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<!--<div class="content">
+			<h1 class="typing title-h">光大银行UP系列</h1>
+
+		</div>-->
+		<video style="opacity: 1;position: relative;z-index: 1;" x-webkit-airplay="true" webkit-playsinline preload="true">
+			<!--<source src="movie/welcome.Ogg" type="video/ogg"></source>-->
+			<source src="movie/welcome.mp4" type="video/mp4"></source>
+			<!--<source src="movie/welcome.mov"></source>-->
+			当前浏览器不支持 video直接播放，点击这里下载视频：
+			<a href="myvideo.webm">下载视频</a>
+		</video>
+
+		<script src="js/mui.js"></script>
+		<script src="js/jquery-3.3.1.js"></script>
+		<script type="text/javascript">
+			//											$('.content').append('<h1 class="typing title-h typing title-h6">3</h1>');
+			$('video').width($(window).width());
+			$('video').height($(window).height());
+			$('video')[0].play();
+			$('body').on('tap', function() {
+//					location.href = 'MainMenu.html';
+				})
+
+			//			setTimeout(function() {
+			//				$('.content').append('<div class="up1">UP</div>');
+			//				$('.content').append('<div class="up2">UP</div>');
+			//				$('.content').append('<h1 class="typing title-h typing title-h2">的诞生</h1>');
+			//				$('.up2').on('webkitAnimationEnd', function() {
+			//					$('.content').empty();
+			//					$('.content').append('<h1 class="typing title-h typing title-h3">颠覆传统</h1>');
+			//
+			//					//					$('.content').append('<h1 class="typing title-h typing title-h5">ARE U REDAY?</h1>');
+			//					$('.title-h3').on('webkitAnimationEnd', function() {
+			//						$('.content').empty();
+			//						$('.content').append('<h1 class="typing title-h typing title-h4">创新平台</h1>');
+			//						$('.title-h4').on('webkitAnimationEnd', function() {
+			//							$('.content').empty();
+			//							$('.content').append('<h1 class="typing title-h typing title-h5">ARE U REDAY?</h1>');
+			//							$('.title-h5').on('webkitAnimationEnd', function() {
+			//								$('.content').empty();
+			//								$('.content').append('<h1 class="typing title-h typing title-h6">3</h1>');
+			//								$('.title-h6').on('webkitAnimationEnd', function() {
+			//									$('.content').empty();
+			//									$('.content').append('<h1 class="typing title-h typing title-h7">2</h1>');
+			//									$('.title-h7').on('webkitAnimationEnd', function() {
+			//										$('.content').empty();
+			//										$('.content').append('<h1 class="typing title-h typing title-h8">1</h1>');
+			//										$('.title-h8').on('webkitAnimationEnd', function() {
+			//											$('.content').empty();
+			//											//											$('.content').append('<h1 class="series zero fadeIn2"><span class="series-number">0"</span><br><span class="series-keyword">从零开始</span></h1>');
+			//										})
+			//									})
+			//								})
+			//							})
+			//						})
+			//
+			//					})
+			//				})
+			//				/*$('.content').append('<h1 class="typing title-h typing title-h3">颠覆传统</h1>');
+			//				$('.content').append('<h1 class="typing title-h typing title-h3">创新平台</h1>');
+			//				$('.content').append('<h1 class="typing title-h typing title-h3">ARE U REDAY?</h1>');*/
+			//			}, 1000);
+		</script>
+	</body>
+
+</html>

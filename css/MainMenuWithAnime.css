@@ -1,0 +1,174 @@
+/* animation */
+
+
+/*淡入*/
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+
+/*放大*/
+
+@keyframes zoomIn {
+	0% {
+		webkit-transform: scale3d(0, 0, 0);
+		transform: scale3d(0, 0, 0);
+	}
+	100% {
+		webkit-transform: scale3d(1, 1, 1);
+		transform: scale3d(1, 1, 1);
+	}
+}
+
+@-webkit-keyframes zoomIn {
+	0% {
+		webkit-transform: scale3d(0, 0, 0);
+		transform: scale3d(0, 0, 0);
+	}
+	100% {
+		webkit-transform: scale3d(1, 1, 1);
+		transform: scale3d(1, 1, 1);
+	}
+}
+
+
+/* anime setting */
+
+.fadeIn {
+	animation: fadein 0.5s both ease-in;
+}
+
+.zoomIn {
+	animation: zoomIn 0.5s both ease-in;
+}
+
+
+/* css */
+
+html,
+body {
+	height: 100%;
+	overflow: hidden;
+}
+
+body {
+	background-image: url(../img/welcome_bk.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.mui-content {
+	background: none;
+	display: none;
+}
+
+.operation-guide {
+	width: 100%;
+	height: 100%;
+	z-index: 2;
+	position: absolute;
+	top: 0;
+}
+
+.menus {
+	position: absolute;
+	bottom: 10px;
+	width: 100%;
+	text-align: center;
+	z-index: 2;
+}
+
+.menus .new-btn img {
+	width: 53px;
+	height: 23px;
+	position: fixed;
+	bottom: 20px;
+	left: 18px;
+}
+
+.menus .me-btn img {
+	width: 37px;
+	height: 23px;
+	position: fixed;
+	bottom: 20px;
+	right: 12px;
+	z-index: 99;
+}
+
+.menus .product-btn img {
+	width: 38px;
+	position: fixed;
+	bottom: 20px;
+	left: 48%;
+	z-index: 99;
+}
+
+.menus-slogan {
+	position: absolute;
+	top: 35%;
+	left: 15%;
+}
+
+.menus-slogan img {
+	width: 80%;
+}
+
+.menus-right-bar {
+	position: fixed;
+	right: 0;
+	z-index: 99;
+	top: 35%;
+}
+
+.menus-right-bar img {
+	width: 30px;
+}
+
+.theme-mask {
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 1, 81, 0.66);
+	position: absolute;
+	top: 0;
+	z-index: 100;
+}
+
+.theme-mask .up-theme {
+	width: 100%;
+	position: absolute;
+	top: 60px;
+	z-index: 101;
+}
+
+.theme-mask .theme-btn {
+	width: 103px;
+	height: 42px;
+	position: absolute;
+	bottom: 27.5%;
+	left: 35%;
+	z-index: 102;
+}
+
+.theme-mask .close-btn {
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	top: 30.5%;
+	right: 20%;
+	z-index: 102;
+}

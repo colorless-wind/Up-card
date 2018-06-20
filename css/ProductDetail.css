@@ -1,0 +1,1734 @@
+/* animation */
+
+
+/*淡入*/
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+
+/*放大*/
+
+@keyframes zoomIn {
+	0% {
+		webkit-transform: scale3d(0, 0, 0);
+		transform: scale3d(0, 0, 0);
+	}
+	100% {
+		webkit-transform: scale3d(1, 1, 1);
+		transform: scale3d(1, 1, 1);
+	}
+}
+
+@-webkit-keyframes zoomIn {
+	0% {
+		webkit-transform: scale3d(0, 0, 0);
+		transform: scale3d(0, 0, 0);
+	}
+	100% {
+		webkit-transform: scale3d(1, 1, 1);
+		transform: scale3d(1, 1, 1);
+	}
+}
+
+
+/*放大缩小*/
+
+@keyframes zoomInOut {
+	0% {
+		webkit-transform: scale3d(1, 1, 1);
+		transform: scale3d(1, 1, 1);
+	}
+	50% {
+		webkit-transform: scale3d(1.2, 1.2, 1.2);
+		transform: scale3d(1.2, 1.2, 1.2);
+	}
+	100% {
+		webkit-transform: scale3d(1, 1, 1);
+		transform: scale3d(1, 1, 1);
+	}
+}
+
+@-webkit-keyframes zoomInOut {
+	0% {
+		webkit-transform: scale3d(1, 1, 1);
+		transform: scale3d(1, 1, 1);
+	}
+	50% {
+		webkit-transform: scale3d(1.2, 1.2, 1.2);
+		transform: scale3d(1.2, 1.2, 1.2);
+	}
+	100% {
+		webkit-transform: scale3d(1, 1, 1);
+		transform: scale3d(1, 1, 1);
+	}
+}
+
+@keyframes shake {
+	0% {
+		top: 5px;
+	}
+	50% {
+		top: 15px;
+	}
+	100% {
+		5px;
+	}
+}
+
+@-webkit-keyframes shake {
+	0% {
+		top: 5px;
+	}
+	50% {
+		top: 15px;
+	}
+	100% {
+		5px;
+	}
+}
+
+
+/* anime setting */
+
+.fadeIn {
+	animation: fadein 0.5s both ease-in;
+}
+
+.zoomIn {
+	animation: zoomIn 0.5s both ease-in;
+}
+
+.zoomInOut {
+	animation: zoomInOut 1s both ease-in;
+	animation-delay: .25s;
+	animation-iteration-count: infinite;
+}
+
+.shake {
+	animation: shake 0.7s both linear;
+	animation-direction: alternate;
+	/*animation-delay: .25s;*/
+	animation-iteration-count: infinite;
+}
+
+
+/* css */
+
+html,
+body {
+	height: 100%;
+	overflow: hidden;
+}
+
+body {
+	/*background-image: url(../img/main.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;*/
+	background-color: black;
+}
+
+.mui-content {
+	background: none;
+	display: none;
+	height: 100%;
+}
+
+.operation-guide {
+	position: absolute;
+	top: 5px;
+	left: 47%;
+	z-index: 1;
+}
+
+.operation-guide img {
+	width: 25px;
+}
+
+.menus {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	text-align: center;
+	z-index: 2;
+}
+
+.menus .new-btn img {
+	width: 68px;
+	/*height: 18px;*/
+}
+
+.menus .me-btn img {
+	width: 68px;
+	/*height: 18px;*/
+}
+
+.menus .product-btn img {
+	width: 68px;
+	/*height: 18px;*/
+}
+
+.menus-right-bar {
+	position: fixed;
+	right: 10px;
+	z-index: 1;
+	top: 44%;
+}
+
+.menus-right-bar p {
+	color: #efefef;
+	font-size: 10px;
+	text-align: center;
+	margin-bottom: 19px;
+	width: 30px;
+}
+
+.menus-right-bar img {
+	width: 30px;
+}
+
+.search-btn {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	z-index: 1;
+}
+
+.search-btn img {
+	width: 27px;
+}
+
+.melody-btn {
+	position: absolute;
+	bottom: 10%;
+	right: 19%;
+	z-index: 1;
+}
+
+.melody-btn img {
+	width: 15px;
+}
+
+.music-btn {
+	position: absolute;
+	bottom: 10%;
+	right: 6%;
+	z-index: 1;
+}
+
+.music-btn img {
+	width: 40px;
+}
+
+.share-guide {
+	position: absolute;
+	top: 0;
+	z-index: 4;
+	width: 100%;
+	height: 100%;
+	opacity: 0.9;
+	pointer-events: none;
+}
+
+.close-btn-for-share {
+	position: absolute;
+	top: 47%;
+	left: 25%;
+	z-index: 5;
+	width: 48%;
+	height: 12%;
+}
+
+
+/*=============================================卡片模板样式=========================================*/
+
+#ran-series-1 {
+	width: 100%;
+	height: 100%;
+	background-image: url(../img/updetail_bg.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background-color: black;
+}
+
+#ran-series-1 .card {
+	width: 40%;
+	position: absolute;
+}
+
+#ran-series-1 .card.card-white {
+	top: 15%;
+	left: 5%;
+}
+
+#ran-series-1 .card.card-black {
+	top: 28%;
+	right: 12%;
+}
+
+#ran-series-1 .card .card-cover {
+	width: 100%;
+}
+
+#ran-series-1 .card .card-cover img {
+	width: 100%;
+}
+
+#ran-series-1 .card .card-apply {
+	width: 100%;
+	text-align: center;
+}
+
+#ran-series-1 .card .card-apply img {
+	width: 60%;
+}
+
+#ran-series-1 .card .card-price p {
+	color: white;
+	text-align: center;
+	font-size: 0.65rem;
+	margin-bottom: 5px;
+}
+
+#ran-series-1 .card .card-price p .old-price-for-line {
+	color: red;
+	text-decoration: line-through;
+}
+
+#ran-series-1 .card .card-price p .old-price-for-line .old-price {
+	color: white;
+}
+
+#ran-series-1 .card .card-craft p {
+	color: white;
+	text-align: center;
+	font-size: 0.65rem;
+}
+
+#ran-series-1 .card-slogan {
+	font-family: "微软雅黑";
+	font-size: 0.9rem;
+	color: white;
+	position: absolute;
+	bottom: 10%;
+	left: 5%;
+}
+
+
+/* ran-series-2 */
+
+#ran-series-2 {
+	width: 100%;
+	height: 100%;
+	background-image: url(../img/douyin_bg.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background-color: black;
+}
+
+#ran-series-2 .card {
+	width: 60%;
+	position: absolute;
+	top: 18%;
+	left: 22%;
+}
+
+#ran-series-2 .card .card-cover {
+	width: 75%;
+	margin: 0 auto;
+}
+
+#ran-series-2 .card .card-cover img {
+	width: 100%;
+}
+
+#ran-series-2 .card .card-apply {
+	width: 100%;
+	text-align: center;
+	margin-top: 5%;
+}
+
+#ran-series-2 .card .card-apply img {
+	width: 50%;
+}
+
+#ran-series-2 .card .card-price p {
+	color: white;
+	text-align: center;
+	font-size: 0.65rem;
+	margin-bottom: 5px;
+}
+
+#ran-series-2 .card .card-price p .old-price-for-line {
+	color: red;
+	text-decoration: line-through;
+}
+
+#ran-series-2 .card .card-price p .old-price-for-line .old-price {
+	color: white;
+}
+
+#ran-series-2 .card .card-craft p {
+	color: white;
+	text-align: center;
+	font-size: 0.65rem;
+}
+
+#ran-series-2 .card-slogan {
+	font-family: "微软雅黑";
+	font-size: 0.9rem;
+	color: white;
+	position: absolute;
+	bottom: 10%;
+	left: 5%;
+}
+
+
+/* ran-series-3 */
+
+#ran-series-3 {
+	width: 100%;
+	height: 100%;
+	background-image: url(../img/football_bg.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background-color: black;
+}
+
+#ran-series-3 .card {
+	width: 90%;
+	position: absolute;
+	top: 11%;
+	left: 5%;
+}
+
+#ran-series-3 .card .card-cover {
+	width: 100%;
+	text-align: center;
+	display: inline-block;
+}
+
+#ran-series-3 .card .card-cover img {
+	width: 150%;
+	/*width: 50%;*/
+}
+
+#ran-series-3 .card .card-apply {
+	margin-top: 10%;
+	width: 100%;
+	/*padding-left: 12%;*/
+	text-align: center;
+}
+
+#ran-series-3 .card .card-apply img {
+	width: 30%;
+}
+
+#ran-series-3 .card .card-price p {
+	color: white;
+	text-align: center;
+	font-size: 0.65rem;
+	margin-bottom: 5px;
+	/*padding-left: 12%;*/
+}
+
+#ran-series-3 .card .card-price p .old-price-for-line {
+	color: red;
+	text-decoration: line-through;
+}
+
+#ran-series-3 .card .card-price p .old-price-for-line .old-price {
+	color: white;
+}
+
+#ran-series-3 .card .card-craft p {
+	color: white;
+	text-align: center;
+	font-size: 0.65rem;
+	/*padding-left: 12%;*/
+}
+
+#ran-series-3 .card-slogan {
+	font-family: "微软雅黑";
+	font-size: 0.9rem;
+	color: white;
+	position: absolute;
+	bottom: 10%;
+	left: 5%;
+}
+
+#ran-series-3 .swiper-container {
+	/*height: 330px;*/
+}
+
+
+/* ran-series-4 */
+
+#ran-series-4 {
+	width: 100%;
+	height: 100%;
+	background-image: url(../img/updetailqiu_bg.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background-color: black;
+}
+
+#ran-series-4 .card {
+	width: 60%;
+	position: absolute;
+	top: 25%;
+	left: 22%;
+}
+
+#ran-series-4 .card .card-cover {
+	width: 100%;
+}
+
+#ran-series-4 .card .card-cover img {
+	width: 100%;
+}
+
+#ran-series-4 .card .card-apply {
+	width: 100%;
+	text-align: center;
+}
+
+#ran-series-4 .card .card-apply img {
+	width: 50%;
+}
+
+#ran-series-4 .card .card-price p {
+	color: white;
+	text-align: center;
+	font-size: 0.65rem;
+	margin-bottom: 5px;
+}
+
+#ran-series-4 .card .card-price p .old-price-for-line {
+	color: red;
+	text-decoration: line-through;
+}
+
+#ran-series-4 .card .card-price p .old-price-for-line .old-price {
+	color: white;
+}
+
+#ran-series-4 .card .card-craft p {
+	color: white;
+	text-align: center;
+	font-size: 0.65rem;
+}
+
+#ran-series-4 .card-slogan {
+	font-family: "微软雅黑";
+	font-size: 0.9rem;
+	color: white;
+	position: absolute;
+	bottom: 10%;
+	left: 5%;
+}
+
+
+/* ran-series-5 */
+
+#ran-series-5 {
+	width: 100%;
+	height: 100%;
+	background-image: url(../img/xiangshang_bg.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background-color: black;
+}
+
+#ran-series-5 .card {
+	width: 40%;
+	position: absolute;
+}
+
+
+/*up01*/
+
+
+/*#ran-series-5 .card.card-up01 {
+	top: 19%;
+	left: 5%;
+}
+
+#ran-series-5 .card.card-up01 .card-cover {
+	margin-top: 20%;
+	width: 100%;
+}
+
+#ran-series-5 .card.card-up01 .card-cover img {
+	width: 100%;
+}
+
+#ran-series-5 .card.card-up01 .card-apply {
+	width: 100%;
+}
+
+#ran-series-5 .card.card-up01 .card-apply img {
+	width: 60%;
+}
+
+#ran-series-5 .card.card-up01 .card-price p {
+	color: white;
+	font-size: 0.65rem;
+	margin-bottom: 5px;
+}
+
+#ran-series-5 .card.card-up01 .card-price p .old-price-for-line {
+	color: red;
+	text-decoration: line-through;
+}
+
+#ran-series-5 .card.card-up01 .card-price p .old-price-for-line .old-price {
+	color: white;
+}
+
+#ran-series-5 .card.card-up01 .card-craft p {
+	color: white;
+	font-size: 0.65rem;
+}*/
+
+
+/*up02*/
+
+
+/*#ran-series-5 .card.card-up02 {
+	top: 15%;
+	right: 12%;
+}
+
+#ran-series-5 .card.card-up02 .card-cover {
+	width: 100%;
+	margin-bottom: 20%;
+}
+
+#ran-series-5 .card.card-up02 .card-cover img {
+	width: 100%;
+}
+
+#ran-series-5 .card.card-up02 .card-apply {
+	width: 100%;
+	text-align: center;
+}
+
+#ran-series-5 .card.card-up02 .card-apply img {
+	width: 60%;
+}
+
+#ran-series-5 .card.card-up02 .card-price p {
+	color: white;
+	text-align: center;
+	font-size: 0.65rem;
+	margin-bottom: 5px;
+}
+
+#ran-series-5 .card.card-up02 .card-price p .old-price-for-line {
+	color: red;
+	text-decoration: line-through;
+}
+
+#ran-series-5 .card.card-up02 .card-price p .old-price-for-line .old-price {
+	color: white;
+}
+
+#ran-series-5 .card.card-up02 .card-craft p {
+	color: white;
+	text-align: center;
+	font-size: 0.65rem;
+}
+
+#ran-series-5 .card-slogan {
+	font-family: "微软雅黑";
+	font-size: 0.9rem;
+	color: white;
+	position: absolute;
+	bottom: 10%;
+	left: 5%;
+}
+*/
+
+
+/*new-up02*/
+
+#ran-series-5 .card.card-up02 {
+	top: 20%;
+	left: 20%;
+}
+
+#ran-series-5 .card.card-up02 .card-cover {
+	width: 100%;
+	margin-bottom: 20%;
+}
+
+#ran-series-5 .card.card-up02 .card-cover img {
+	width: 100%;
+}
+
+#ran-series-5 .card.card-up02 .card-apply {
+	width: 100%;
+	text-align: center;
+}
+
+#ran-series-5 .card.card-up02 .card-apply img {
+	width: 60%;
+}
+
+#ran-series-5 .card.card-up02 .card-price p {
+	color: white;
+	text-align: center;
+	font-size: 0.65rem;
+	margin-bottom: 5px;
+}
+
+#ran-series-5 .card.card-up02 .card-price p .old-price-for-line {
+	color: red;
+	text-decoration: line-through;
+}
+
+#ran-series-5 .card.card-up02 .card-price p .old-price-for-line .old-price {
+	color: white;
+}
+
+#ran-series-5 .card.card-up02 .card-craft p {
+	color: white;
+	text-align: center;
+	font-size: 0.65rem;
+}
+
+#ran-series-5 .card-slogan {
+	font-family: "微软雅黑";
+	font-size: 0.9rem;
+	color: white;
+	position: absolute;
+	bottom: 10%;
+	left: 5%;
+}
+
+
+/* xing-series-1 */
+
+#xing-series-1 {
+	width: 100%;
+	height: 100%;
+	background-image: url(../img/xingdetail_bg.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background-color: black;
+}
+
+#xing-series-1 .card {
+	width: 100%;
+	position: absolute;
+	top: 16%;
+	/*left: -5%;*/
+}
+
+#xing-series-1 .card .card-cover {
+	width: 100%;
+	text-align: center;
+	display: inline-block;
+}
+
+#xing-series-1 .card .card-control.left {
+	text-align: center;
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	z-index: 99;
+}
+
+#xing-series-1 .card .card-control.left img {
+	width: 60%;
+}
+
+#xing-series-1 .card .card-control.right {
+	text-align: center;
+	display: inline-block;
+	position: absolute;
+	top: 0%;
+	right: -2%;
+	z-index: 99;
+}
+
+#xing-series-1 .card .card-control.right img {
+	width: 60%;
+}
+
+#xing-series-1 .card .card-cover img {
+	width: 110%;
+}
+
+#xing-series-1 .card .card-title {
+	font-size: 0.75rem;
+	width: 100%;
+	text-align: center;
+}
+
+#xing-series-1 .card .card-title .constellation {
+	font-size: 1rem;
+}
+
+#xing-series-1 .card .card-apply {
+	/*margin-top: 10%;*/
+	width: 100%;
+	text-align: center;
+}
+
+#xing-series-1 .card .card-apply img {
+	width: 25%;
+}
+
+#xing-series-1 .card .card-price p {
+	color: white;
+	text-align: center;
+	font-size: 0.65rem;
+	margin-bottom: 5px;
+}
+
+#xing-series-1 .card .card-price p .old-price-for-line {
+	color: red;
+	text-decoration: line-through;
+}
+
+#xing-series-1 .card .card-price p .old-price-for-line .old-price {
+	color: white;
+}
+
+#xing-series-1 .card .card-craft p {
+	color: white;
+	text-align: center;
+	font-size: 0.65rem;
+}
+
+#xing-series-1 .card-slogan {
+	font-family: "微软雅黑";
+	font-size: 0.9rem;
+	color: white;
+	position: absolute;
+	bottom: 10%;
+	left: 5%;
+}
+
+#xing-series-1 .swiper-container {
+	/*height: 330px;*/
+}
+
+
+/* xing-series-2 */
+
+#xing-series-2 {
+	width: 100%;
+	height: 100%;
+	background-image: url(../img/xing_bg.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background-color: black;
+}
+
+#xing-series-2 .card {
+	width: 100%;
+	position: absolute;
+	top: 16%;
+}
+
+#xing-series-2 .card .card-cover {
+	width: 100%;
+	text-align: center;
+	display: inline-block;
+}
+
+#xing-series-2 .card .card-control.left {
+	text-align: center;
+	display: inline-block;
+	position: absolute;
+	top: 25%;
+	left: 10%;
+	z-index: 99;
+}
+
+#xing-series-2 .card .card-control.left img {
+	width: 60%;
+}
+
+#xing-series-2 .card .card-control.right {
+	text-align: center;
+	display: inline-block;
+	position: absolute;
+	top: 25%;
+	right: 10%;
+	z-index: 99;
+}
+
+#xing-series-2 .card .card-control.right img {
+	width: 60%;
+}
+
+#xing-series-2 .card .card-cover img {
+	width: 130%;
+}
+
+#xing-series-2 .card .card-title {
+	font-size: 0.75rem;
+	width: 100%;
+	text-align: center;
+	color: white;
+}
+
+#xing-series-2 .card .card-title .constellation {
+	font-size: 1rem;
+}
+
+#xing-series-2 .card .card-apply {
+	margin-top: 10%;
+	width: 100%;
+	text-align: center;
+}
+
+#xing-series-2 .card .card-apply img {
+	width: 25%;
+}
+
+#xing-series-2 .card .card-price p {
+	color: white;
+	text-align: center;
+	font-size: 0.65rem;
+	margin-bottom: 5px;
+}
+
+#xing-series-2 .card .card-price p .old-price-for-line {
+	color: red;
+	text-decoration: line-through;
+}
+
+#xing-series-2 .card .card-price p .old-price-for-line .old-price {
+	color: white;
+}
+
+#xing-series-2 .card .card-price p .new-price {
+	display: none;
+}
+
+#xing-series-2 .card .card-craft p {
+	color: white;
+	text-align: center;
+	font-size: 0.65rem;
+}
+
+#xing-series-2 .card-slogan {
+	font-family: "微软雅黑";
+	font-size: 0.9rem;
+	color: white;
+	position: absolute;
+	bottom: 10%;
+	left: 5%;
+}
+
+#xing-series-2 .swiper-container {
+	/*height: 330px;*/
+}
+
+
+/* xing-series-3 */
+
+#xing-series-3 {
+	width: 100%;
+	height: 100%;
+	background-image: url(../img/xing_bg.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background-color: black;
+}
+
+#xing-series-3 .card {
+	width: 100%;
+	position: absolute;
+	top: 21%;
+	/*left: -5%;*/
+}
+
+#xing-series-3 .card .card-cover {
+	width: 100%;
+	text-align: center;
+	display: inline-block;
+}
+
+#xing-series-3 .card .card-control.left {
+	text-align: center;
+	display: inline-block;
+	position: absolute;
+	top: 25%;
+	left: 10%;
+	z-index: 99;
+}
+
+#xing-series-3 .card .card-control.left img {
+	width: 60%;
+}
+
+#xing-series-3 .card .card-control.right {
+	text-align: center;
+	display: inline-block;
+	position: absolute;
+	top: 25%;
+	right: 10%;
+	z-index: 99;
+}
+
+#xing-series-3 .card .card-control.right img {
+	width: 60%;
+}
+
+#xing-series-3 .card .card-cover img {
+	width: 130%;
+}
+
+#xing-series-3 .card .card-title {
+	font-size: 0.75rem;
+	width: 100%;
+	text-align: center;
+	color: white;
+}
+
+#xing-series-3 .card .card-title .constellation {
+	font-size: 1rem;
+}
+
+#xing-series-3 .card .card-apply {
+	margin-top: 10%;
+	width: 100%;
+	text-align: center;
+}
+
+#xing-series-3 .card .card-apply img {
+	width: 25%;
+}
+
+#xing-series-3 .card .card-price p {
+	color: white;
+	text-align: center;
+	font-size: 0.65rem;
+	margin-bottom: 5px;
+}
+
+#xing-series-3 .card .card-price p .old-price-for-line {
+	color: red;
+	text-decoration: line-through;
+}
+
+#xing-series-3 .card .card-price p .old-price-for-line .old-price {
+	color: white;
+}
+
+#xing-series-3 .card .card-price p .new-price {
+	display: none;
+}
+
+#xing-series-3 .card .card-craft p {
+	color: white;
+	text-align: center;
+	font-size: 0.65rem;
+}
+
+#xing-series-3 .card-slogan {
+	font-family: "微软雅黑";
+	font-size: 0.9rem;
+	color: white;
+	position: absolute;
+	bottom: 10%;
+	left: 5%;
+}
+
+#xing-series-3 .swiper-container {
+	/*height: 330px;*/
+}
+
+
+/* meng-series-1 */
+
+#meng-series-1 {
+	width: 100%;
+	height: 100%;
+	background-image: url(../img/petsduck_bg.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background-color: black;
+}
+
+
+/*c01*/
+
+#meng-series-1 .card.c01 {
+	width: 50%;
+	position: absolute;
+	top: 11%;
+	left: 7.5%;
+}
+
+#meng-series-1 .card.c01 .card-cover {
+	width: 100%;
+	text-align: center;
+	display: inline-block;
+	transform: rotate(35deg);
+	-webkit-transform: rotate(35deg);
+}
+
+#meng-series-1 .card.c01 .card-cover img {
+	width: 50%;
+}
+
+#meng-series-1 .card.c01 .card-apply {
+	margin-top: 10%;
+	width: 100%;
+	text-align: center;
+	position: absolute;
+	top: -5%;
+	left: -35%;
+	transform: rotate(-35deg);
+	-webkit-transform: rotate(-35deg);
+}
+
+#meng-series-1 .card.c01 .card-apply img {
+	width: 55%;
+}
+
+
+/*c02*/
+
+#meng-series-1 .card.c02 {
+	width: 50%;
+	position: absolute;
+	top: 39%;
+	left: -1.5%;
+}
+
+#meng-series-1 .card.c02 .card-cover {
+	width: 100%;
+	text-align: center;
+	display: inline-block;
+	transform: rotate(-20deg);
+	-webkit-transform: rotate(-20deg);
+}
+
+#meng-series-1 .card.c02 .card-cover img {
+	width: 75%;
+}
+
+#meng-series-1 .card.c02 .card-apply {
+	margin-top: 10%;
+	width: 100%;
+	text-align: center;
+	position: absolute;
+	bottom: -26%;
+	left: 25%;
+	transform: rotate(5deg);
+	-webkit-transform: rotate(5deg);
+}
+
+#meng-series-1 .card.c02 .card-apply img {
+	width: 55%;
+}
+
+
+/*c03*/
+
+#meng-series-1 .card.c03 {
+	width: 50%;
+	position: absolute;
+	top: 57%;
+	left: 5%;
+}
+
+#meng-series-1 .card.c03 .card-cover {
+	width: 100%;
+	text-align: center;
+	display: inline-block;
+	transform: rotate(-60deg);
+	-webkit-transform: rotate(-60deg);
+}
+
+#meng-series-1 .card.c03 .card-cover img {
+	width: 50%;
+}
+
+#meng-series-1 .card.c03 .card-apply {
+	margin-top: 10%;
+	width: 100%;
+	text-align: center;
+	position: absolute;
+	bottom: -5%;
+	left: -25%;
+	transform: rotate(5deg);
+	-webkit-transform: rotate(5deg);
+}
+
+#meng-series-1 .card.c03 .card-apply img {
+	width: 55%;
+}
+
+
+/*c04*/
+
+#meng-series-1 .card.c04 {
+	width: 50%;
+	position: absolute;
+	top: 12%;
+	right: 0;
+}
+
+#meng-series-1 .card.c04 .card-cover {
+	width: 100%;
+	text-align: center;
+	display: inline-block;
+	transform: rotate(-55deg);
+	-webkit-transform: rotate(-55deg);
+}
+
+#meng-series-1 .card.c04 .card-cover img {
+	width: 50%;
+}
+
+#meng-series-1 .card.c04 .card-apply {
+	margin-top: 10%;
+	width: 100%;
+	text-align: center;
+	position: absolute;
+	top: -20%;
+	right: -18%;
+	transform: rotate(5deg);
+	-webkit-transform: rotate(5deg);
+}
+
+#meng-series-1 .card.c04 .card-apply img {
+	width: 55%;
+}
+
+
+/*c05*/
+
+#meng-series-1 .card.c05 {
+	width: 50%;
+	position: absolute;
+	top: 38%;
+	right: 5%;
+}
+
+#meng-series-1 .card.c05 .card-cover {
+	width: 100%;
+	text-align: center;
+	display: inline-block;
+	transform: rotate(-55deg);
+	-webkit-transform: rotate(-25deg);
+}
+
+#meng-series-1 .card.c05 .card-cover img {
+	width: 50%;
+}
+
+#meng-series-1 .card.c05 .card-apply {
+	margin-top: 10%;
+	width: 100%;
+	text-align: center;
+	position: absolute;
+	bottom: -25%;
+	right: -10%;
+	transform: rotate(3deg);
+	-webkit-transform: rotate(3deg);
+}
+
+#meng-series-1 .card.c05 .card-apply img {
+	width: 55%;
+}
+
+
+/*c06*/
+
+#meng-series-1 .card.c06 {
+	width: 50%;
+	position: absolute;
+	bottom: 17%;
+	right: 0;
+}
+
+#meng-series-1 .card.c06 .card-price p {
+	color: white;
+	text-align: center;
+	font-size: 0.65rem;
+	margin-bottom: 5px;
+}
+
+#meng-series-1 .card.c06 .card-price p .old-price-for-line {
+	color: red;
+	text-decoration: line-through;
+}
+
+#meng-series-1 .card.c06 .card-price p .old-price-for-line .old-price {
+	color: white;
+}
+
+#meng-series-1 .card.c06 .card-craft p {
+	color: white;
+	text-align: center;
+	font-size: 0.65rem;
+}
+
+#meng-series-1 .card-slogan {
+	font-family: "微软雅黑";
+	font-size: 0.9rem;
+	color: white;
+	position: absolute;
+	bottom: 10%;
+	left: 5%;
+}
+
+
+/* meng-series-2 */
+
+#meng-series-2 {
+	width: 100%;
+	height: 100%;
+	background-image: url(../img/duck_bg.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background-color: black;
+}
+
+#meng-series-2 .card {
+	width: 70%;
+	height: 100%;
+	position: absolute;
+	top: 14%;
+	left: 15%;
+}
+
+#meng-series-2 .card .card-cover {
+	width: 100%;
+	text-align: center;
+	display: inline-block;
+}
+
+#meng-series-2 .card .card-cover img {
+	width: 75%;
+}
+
+#meng-series-2 .card .card-apply {
+	margin-top: 10%;
+	width: 100%;
+	text-align: center;
+}
+
+#meng-series-2 .card .card-apply img {
+	width: 35%;
+}
+
+#meng-series-2 .card .card-price p {
+	color: white;
+	text-align: center;
+	font-size: 0.65rem;
+	margin-bottom: 5px;
+}
+
+#meng-series-2 .card .card-price p .old-price-for-line {
+	color: red;
+	text-decoration: line-through;
+}
+
+#meng-series-2 .card .card-price p .old-price-for-line .old-price {
+	color: white;
+}
+
+#meng-series-2 .card .card-craft p {
+	color: white;
+	text-align: center;
+	font-size: 0.65rem;
+}
+
+#meng-series-2 .card-slogan {
+	font-family: "微软雅黑";
+	font-size: 0.9rem;
+	color: white;
+	position: absolute;
+	bottom: 10%;
+	left: 5%;
+}
+
+#meng-series-2 .swiper-container {
+	height: 260px;
+}
+
+
+/* meng-series-3 */
+
+#meng-series-3 {
+	width: 100%;
+	height: 100%;
+	background-image: url(../img/family_bg.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background-color: black;
+}
+
+#meng-series-3 .card {
+	width: 53%;
+	position: absolute;
+}
+
+
+/*bear1*/
+
+#meng-series-3 .card.bear1 {
+	top: 15%;
+	right: 5%;
+}
+
+#meng-series-3 .card.bear1 .card-cover {
+	width: 100%;
+}
+
+#meng-series-3 .card.bear1 .card-cover img {
+	width: 100%;
+}
+
+#meng-series-3 .card.bear1 .card-apply {
+	position: absolute;
+	top: 30%;
+	left: -70%;
+}
+
+#meng-series-3 .card.bear1 .card-apply img {
+	width: 50%;
+}
+
+#meng-series-3 .card.bear1 .card-price {
+	position: absolute;
+	top: 60%;
+	left: -70%;
+}
+
+#meng-series-3 .card.bear1 .card-price p {
+	color: black;
+	text-align: center;
+	font-size: 0.65rem;
+	margin-bottom: 5px;
+}
+
+#meng-series-3 .card.bear1 .card-price p .old-price-for-line {
+	color: red;
+	text-decoration: line-through;
+}
+
+#meng-series-3 .card.bear1 .card-price p .old-price-for-line .old-price {
+	color: black;
+}
+
+#meng-series-3 .card.bear1 .card-craft {
+	position: absolute;
+	top: 80%;
+	left: -70%;
+}
+
+#meng-series-3 .card.bear1 .card-craft p {
+	color: black;
+	text-align: center;
+	font-size: 0.65rem;
+}
+
+
+/*bear2*/
+
+#meng-series-3 .card.bear2 {
+	top: 40%;
+	left: 15%;
+}
+
+#meng-series-3 .card.bear2 .card-cover {
+	width: 100%;
+}
+
+#meng-series-3 .card.bear2 .card-cover img {
+	width: 100%;
+}
+
+#meng-series-3 .card.bear2 .card-apply {
+	position: absolute;
+	bottom: -35%;
+	left: -20%;
+}
+
+#meng-series-3 .card.bear2 .card-apply img {
+	width: 50%;
+}
+
+#meng-series-3 .card.bear2 .card-price {
+	position: absolute;
+	bottom: -55%;
+	left: -20%;
+}
+
+#meng-series-3 .card.bear2 .card-price p {
+	color: black;
+	text-align: center;
+	font-size: 0.65rem;
+	margin-bottom: 5px;
+}
+
+#meng-series-3 .card.bear2 .card-price p .old-price-for-line {
+	color: red;
+	text-decoration: line-through;
+}
+
+#meng-series-3 .card.bear2 .card-price p .old-price-for-line .old-price {
+	color: black;
+}
+
+#meng-series-3 .card.bear2 .card-craft {
+	position: absolute;
+	bottom: -75%;
+	left: -20%;
+}
+
+#meng-series-3 .card.bear2 .card-craft p {
+	color: black;
+	text-align: center;
+	font-size: 0.65rem;
+}
+
+#meng-series-3 .card-slogan {
+	font-family: "微软雅黑";
+	font-size: 0.9rem;
+	color: black;
+	position: absolute;
+	bottom: 10%;
+	left: 5%;
+}
+
+
+/* meng-series-4 */
+
+#meng-series-4 {
+	width: 100%;
+	height: 100%;
+	background-image: url(../img/bear_bg.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background-color: black;
+}
+
+#meng-series-4 .card {
+	width: 53%;
+	position: absolute;
+}
+
+
+/*bear1*/
+
+#meng-series-4 .card.bear1 {
+	top: 10%;
+	right: 8%;
+}
+
+#meng-series-4 .card.bear1 .card-cover {
+	width: 100%;
+	transform: rotate(30deg);
+	-webkit-transform: rotate(30deg);
+}
+
+#meng-series-4 .card.bear1 .card-cover img {
+	width: 90%;
+}
+
+#meng-series-4 .card.bear1 .card-apply {
+	position: absolute;
+	top: 25%;
+	left: -60%;
+}
+
+#meng-series-4 .card.bear1 .card-apply img {
+	width: 50%;
+}
+
+#meng-series-4 .card.bear1 .card-price {
+	position: absolute;
+	top: 60%;
+	left: -60%;
+}
+
+#meng-series-4 .card.bear1 .card-price p {
+	color: black;
+	text-align: center;
+	font-size: 0.65rem;
+	margin-bottom: 5px;
+}
+
+#meng-series-4 .card.bear1 .card-price p .old-price-for-line {
+	color: red;
+	text-decoration: line-through;
+}
+
+#meng-series-4 .card.bear1 .card-price p .old-price-for-line .old-price {
+	color: black;
+}
+
+#meng-series-4 .card.bear1 .card-craft {
+	position: absolute;
+	top: 76%;
+	left: -60%;
+}
+
+#meng-series-4 .card.bear1 .card-craft p {
+	color: black;
+	text-align: center;
+	font-size: 0.65rem;
+}
+
+
+/*bear2*/
+
+#meng-series-4 .card.bear2 {
+	top: 25%;
+	left: 25%;
+}
+
+#meng-series-4 .card.bear2 .card-cover {
+	width: 100%;
+	margin-top: 8%;
+	/*margin-left: -10%;*/
+	transform: rotate(-10deg);
+	-webkit-transform: rotate(-10deg);
+}
+
+#meng-series-4 .card.bear2 .card-cover img {
+	width: 90%;
+}
+
+#meng-series-4 .card.bear2 .card-apply {
+	position: absolute;
+	bottom: -105%;
+	left: -25%;
+}
+
+#meng-series-4 .card.bear2 .card-apply img {
+	width: 50%;
+}
+
+#meng-series-4 .card.bear2 .card-price {
+	position: absolute;
+	bottom: -125%;
+	left: -25%;
+}
+
+#meng-series-4 .card.bear2 .card-price p {
+	color: black;
+	text-align: center;
+	font-size: 0.65rem;
+	margin-bottom: 5px;
+}
+
+#meng-series-4 .card.bear2 .card-price p .old-price-for-line {
+	color: red;
+	text-decoration: line-through;
+}
+
+#meng-series-4 .card.bear2 .card-price p .old-price-for-line .old-price {
+	color: black;
+}
+
+#meng-series-4 .card.bear2 .card-craft {
+	position: absolute;
+	bottom: -145%;
+	left: -25%;
+}
+
+#meng-series-4 .card.bear2 .card-craft p {
+	color: black;
+	text-align: center;
+	font-size: 0.65rem;
+}
+
+
+/*bear3*/
+
+#meng-series-4 .card.bear3 {
+	top: 45%;
+	right: 15%;
+}
+
+#meng-series-4 .card.bear3 .card-cover {
+	width: 100%;
+	transform: rotate(10deg);
+	-webkit-transform: rotate(10deg);
+}
+
+#meng-series-4 .card.bear3 .card-cover img {
+	width: 90%;
+}
+
+#meng-series-4 .card.bear3 .card-apply {
+	position: absolute;
+	bottom: -42%;
+	right: -45%;
+}
+
+#meng-series-4 .card.bear3 .card-apply img {
+	width: 50%;
+}
+
+#meng-series-4 .card.bear3 .card-price {
+	position: absolute;
+	bottom: -62%;
+	right: 7%;
+}
+
+#meng-series-4 .card.bear3 .card-price p {
+	color: black;
+	text-align: center;
+	font-size: 0.65rem;
+	margin-bottom: 5px;
+}
+
+#meng-series-4 .card.bear3 .card-price p .old-price-for-line {
+	color: red;
+	text-decoration: line-through;
+}
+
+#meng-series-4 .card.bear3 .card-price p .old-price-for-line .old-price {
+	color: black;
+}
+
+#meng-series-4 .card.bear3 .card-craft {
+	position: absolute;
+	bottom: -82%;
+	right: -15%;
+}
+
+#meng-series-4 .card.bear3 .card-craft p {
+	color: black;
+	text-align: center;
+	font-size: 0.65rem;
+}
+
+#meng-series-4 .card-slogan {
+	font-family: "微软雅黑";
+	font-size: 0.9rem;
+	color: black;
+	position: absolute;
+	bottom: 10%;
+	left: 5%;
+}

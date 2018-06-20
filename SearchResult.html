@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>搜索结果</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="css/mui.min.css">
+
+		<style type="text/css">
+			html,
+			body {
+				height: 100%;
+				overflow: hidden;
+			}
+			
+			body {
+				background-image: url(img/bg.jpg);
+				background-size: cover;
+				background-repeat: no-repeat;
+			}
+			
+			.mui-card {
+				margin: 20px 20px 0 40px;
+				box-shadow: 0 0 0;
+				overflow: visible
+			}
+			
+			.mui-media-title {
+				font-size: 1rem;
+				/*font-weight: 600;*/
+				font-family: "微软雅黑";
+				line-height: 1.4;
+				white-space: normal;
+				padding-bottom: 10px;
+			}
+			
+			.mui-media-body {
+				font-family: "微软雅黑";
+			}
+			
+			.mui-card .right-arrow {
+				width: 10px;
+				height: 22px;
+				margin-top: 10px;
+			}
+			
+			.mui-table-view,
+			.mui-card {
+				background: none;
+			}
+			
+			.mui-table-view-cell {
+				margin-bottom: 10px;
+				background-color: white;
+				border-radius: 3px;
+			}
+			
+			.mui-table-view-cell:last-child {
+				margin-bottom: 0;
+			}
+			
+			.mui-table-view-cell:after {
+				height: 0;
+			}
+			
+			.mui-card .mui-table-view .mui-table-view-cell:first-child,
+			.mui-card .mui-table-view .mui-table-view-divider:first-child {
+				border-radius: 3px;
+			}
+			
+			.circle {
+				width: 10px;
+				height: 10px;
+				border-radius: 10px;
+				background-color: deeppink;
+				position: absolute;
+				z-index: 99999991;
+				top: 18px;
+				left: -25px;
+			}
+			
+			footer {
+				margin: 20px 20px 0 40px;
+				position: absolute;
+				bottom: 20px;
+			}
+			
+			footer p {
+				font-family: "微软雅黑";
+				color: #333;
+				font-size: 1rem;
+			}
+			
+			footer .footer-img {
+				width: 20px;
+				margin-right: 15px;
+				position: relative;
+				top: 5px;
+			}
+			
+			.nav-space {
+				padding-top: 15px;
+			}
+			
+			.nav-bar {
+				background-image: url(img/top.jpg);
+				background-size: 116.5%;
+				background-repeat: no-repeat;
+				min-height: 50px;
+				padding-bottom: 10px;
+			}
+			
+			.nav-bar .nav-bar-img {
+				width: 30px;
+				position: absolute;
+				top: 25px;
+			}
+			
+			.nav-bar .nav-bar-img-left {
+				left: 20px;
+			}
+			
+			.nav-bar .nav-bar-img-right {
+				right: 20px;
+			}
+			
+			.nav-bar .search-bar {
+				width: 80%;
+				margin-left: 20%;
+				margin-top: 6px;
+			}
+			
+			.nav-bar .search-bar .search-bg {
+				width: 75%;
+				height: 34px;
+				position: absolute;
+				z-index: 1;
+				opacity: 0.8;
+			}
+			
+			.nav-bar .search-bar .search-btn {
+				position: absolute;
+				z-index: 2;
+				width: 25px;
+				margin-top: 5px;
+				margin-left: 5px;
+			}
+			
+			.nav-bar .search-bar input {
+				width: 80%;
+				background: none;
+				border: none;
+				position: relative;
+				z-index: 2;
+				height: 34px;
+				padding-left: 25px;
+				font-family: "微软雅黑";
+				color: #efefef;
+			}
+			
+			.nav-bar .search-bar input::-webkit-input-placeholder {
+				/* WebKit browsers */
+				color: #dfdade;
+			}
+			
+			.nav-bar .search-bar input:-moz-placeholder {
+				/* Mozilla Firefox 4 to 18 */
+				color: #dfdade;
+			}
+			
+			.nav-bar .search-bar input::-moz-placeholder {
+				/* Mozilla Firefox 19+ */
+				color: #dfdade;
+			}
+			
+			.nav-bar .search-bar input:-ms-input-placeholder {
+				/* Internet Explorer 10+ */
+				color: #dfdade;
+			}
+		</style>
+	</head>
+
+	<body>
+		<nav class="nav-bar nav-space">
+			<img class="nav-bar-img nav-bar-img-left go-back" src="img/back.png">
+			<div class="search-bar">
+				<img src="img/search_bg.png" class="search-bg" />
+				<input name="" id="" value="" placeholder="例, 搜标题" />
+				<img src="img/search.png" class="search-btn" />
+			</div>
+		</nav>
+
+		<div class="mui-card" style="margin-bottom: 35px;">
+			<!--<div class="circle"></div>-->
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell mui-media">
+					<a href="javascript:;">
+						<div class="mui-media-title">我是标题,凌晨，华北天空一声巨响！一颗卫星腾空而起，一技术全球首创，to be biggest dreamer</div>
+						<img class="mui-media-object mui-pull-right right-arrow" src="img/arrow.png">
+						<div class="mui-media-body">
+							<p class='mui-ellipsis'>据中国新闻网5月9日报道称，中国成功发射高分五号卫星。而值得注意的是，从“高分五号”的研制立项，再到最后的成功发射，经过了长达十年的漫长历程。</p>
+							<p class='mui-ellipsis'>5月6日</p>
+						</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media">
+					<a href="javascript:;">
+						<div class="mui-media-title">我是标题,凌晨，华北天空一声巨响！一颗卫星腾空而起</div>
+						<img class="mui-media-object mui-pull-right right-arrow" src="img/arrow.png">
+						<div class="mui-media-body">
+							<p class='mui-ellipsis'>据中国新闻网5月9日报道称，中国成功发射高分五号卫星。而值得注意的是，从“高分五号”的研制立项，再到最后的成功发射，经过了长达十年的漫长历程。</p>
+							<p class='mui-ellipsis'>5月6日</p>
+						</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media">
+					<a href="javascript:;">
+						<div class="mui-media-title">我是标题,华北天空一声巨响！</div>
+						<img class="mui-media-object mui-pull-right right-arrow" src="img/arrow.png">
+						<div class="mui-media-body">
+							<p class='mui-ellipsis'>据中国新闻网5月9日报道称，中国成功发射高分五号卫星。而值得注意的是，从“高分五号”的研制立项，再到最后的成功发射，经过了长达十年的漫长历程。</p>
+							<p class='mui-ellipsis'>5月6日</p>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+
+		<script src="js/mui.js"></script>
+		<script src="js/jquery-3.3.1.js"></script>
+		<script>
+			$('.go-back').on('tap', function() {
+				history.back();
+			})
+		</script>
+	</body>
+
+</html>

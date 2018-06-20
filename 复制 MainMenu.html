@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>聚合菜单</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="css/mui.min.css">
+
+		<style type="text/css">
+			html,
+			body {
+				height: 100%;
+				overflow: hidden;
+			}
+			
+			body {
+				background-image: url(img/welcome_bk.png);
+				background-size: cover;
+				background-repeat: no-repeat;
+			}
+			
+			.mui-content {
+				background: none;
+				display: none;
+			}
+			
+			.menus {
+				position: absolute;
+				bottom: 10px;
+				width: 100%;
+				text-align: center;
+				z-index: 2;
+			}
+			
+			.menus .product-btn img {
+				width: 50%;
+				position: relative;
+				top: -10px;
+			}
+			
+			.menus-slogan {
+				position: absolute;
+				top: 35%;
+				left: 15%;
+			}
+			.menus-slogan img{
+				width: 80%;
+			}
+			.menus-right-bar {
+				position: absolute;
+				top: 60px;
+			}
+			
+			.menus-right-bar img {
+				width: 100%;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<video style="opacity: 1;position: relative;z-index: 1;" x-webkit-airplay="true" webkit-playsinline preload="true">
+			<source src="movie/welcome.Ogg" type="video/ogg"></source>
+			<source src="movie/welcome.mp4" type="video/mp4"></source>
+			<!--<source src="movie/welcome.mov"></source>-->
+			当前浏览器不支持 video直接播放，点击这里下载视频：
+			<a href="myvideo.webm">下载视频</a>
+		</video>
+
+		<div class="mui-content">
+			<div class="mui-row menus">
+				<div class="mui-col-xs-4 mui-col-sm-4">
+					<div class="new-btn">
+						<img src="img/new.png" />
+					</div>
+				</div>
+				<div class="mui-col-xs-4 mui-col-sm-4">
+
+					<div class="product-btn">
+						<img src="img/product_btn.png" />
+					</div>
+				</div>
+				<div class="mui-col-xs-4 mui-col-sm-4">
+					<div class="me-btn">
+						<img src="img/me.png" />
+					</div>
+				</div>
+			</div>
+			<div class="menus-slogan">
+				<img src="img/slogan.png" />
+			</div>
+			<div class="menus-right-bar">
+				<img src="img/menu_right_bar.png" />
+			</div>
+		</div>
+
+		<script src="js/mui.js"></script>
+		<script src="js/jquery-3.3.1.js"></script>
+		<script>
+			$('video').width($(window).width());
+			$('video').height($(window).height());
+			$('video')[0].play();
+			setTimeout(function() {
+//				$('video').css('opacity',0);
+				$('video').hide();
+				$('.mui-content').fadeIn();
+			}, 11500)
+
+			$('.new-btn').on('tap', function() {
+				location.href = 'NewsCenter.html';
+			})
+
+			$('.product-btn').on('tap', function() {
+				location.href = 'ProductLongIntro.html';
+			})
+
+			$('.me-btn').on('tap', function() {
+				location.href = 'PersonalCenter.html';
+			})
+		</script>
+	</body>
+
+</html>

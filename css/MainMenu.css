@@ -1,0 +1,264 @@
+/* animation */
+
+
+/*淡入*/
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+
+/*放大*/
+
+@keyframes zoomIn {
+	0% {
+		webkit-transform: scale3d(0, 0, 0);
+		transform: scale3d(0, 0, 0);
+	}
+	100% {
+		webkit-transform: scale3d(1, 1, 1);
+		transform: scale3d(1, 1, 1);
+	}
+}
+
+@-webkit-keyframes zoomIn {
+	0% {
+		webkit-transform: scale3d(0, 0, 0);
+		transform: scale3d(0, 0, 0);
+	}
+	100% {
+		webkit-transform: scale3d(1, 1, 1);
+		transform: scale3d(1, 1, 1);
+	}
+}
+
+
+/*放大缩小*/
+
+@keyframes zoomInOut {
+	0% {
+		webkit-transform: scale3d(1, 1, 1);
+		transform: scale3d(1, 1, 1);
+	}
+	50% {
+		webkit-transform: scale3d(1.2, 1.2, 1.2);
+		transform: scale3d(1.2, 1.2, 1.2);
+	}
+	100% {
+		webkit-transform: scale3d(1, 1, 1);
+		transform: scale3d(1, 1, 1);
+	}
+}
+
+@-webkit-keyframes zoomInOut {
+	0% {
+		webkit-transform: scale3d(1, 1, 1);
+		transform: scale3d(1, 1, 1);
+	}
+	50% {
+		webkit-transform: scale3d(1.2, 1.2, 1.2);
+		transform: scale3d(1.2, 1.2, 1.2);
+	}
+	100% {
+		webkit-transform: scale3d(1, 1, 1);
+		transform: scale3d(1, 1, 1);
+	}
+}
+
+@keyframes shake {
+	0% {
+		top: 5px;
+	}
+	50% {
+		top: 15px;
+	}
+	100% {
+		5px;
+	}
+}
+
+@-webkit-keyframes shake {
+	0% {
+		top: 5px;
+	}
+	50% {
+		top: 15px;
+	}
+	100% {
+		5px;
+	}
+}
+
+
+/* anime setting */
+
+.fadeIn {
+	animation: fadein 0.5s both ease-in;
+}
+
+.zoomIn {
+	animation: zoomIn 0.5s both ease-in;
+}
+
+.zoomInOut {
+	animation: zoomInOut 1s both ease-in;
+	animation-delay: .25s;
+	animation-iteration-count: infinite;
+}
+
+.shake {
+	animation: shake 0.7s both linear;
+	animation-direction: alternate;
+	/*animation-delay: .25s;*/
+	animation-iteration-count: infinite;
+}
+
+
+/* css */
+
+html,
+body {
+	height: 100%;
+	overflow: hidden;
+}
+
+body {
+	/*background-image: url(../img/main.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;*/
+	background-color: black;
+}
+
+.mui-content {
+	background: none;
+	display: none;
+	height: 100%;
+}
+
+.operation-guide {
+	position: absolute;
+	top: 5px;
+	left: 47%;
+	z-index: 1;
+}
+
+.operation-guide img {
+	width: 25px;
+}
+
+.menus {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	text-align: center;
+	z-index: 2;
+}
+
+.menus .new-btn img {
+	width: 68px;
+	/*height: 18px;*/
+}
+
+.menus .me-btn img {
+	width: 68px;
+	/*height: 18px;*/
+}
+
+.menus .product-btn img {
+	width: 68px;
+	/*height: 18px;*/
+}
+
+.menus-right-bar {
+	position: fixed;
+	right: 10px;
+	z-index: 1;
+	top: 44%;
+}
+
+.menus-right-bar p {
+	color: #efefef;
+	font-size: 10px;
+	text-align: center;
+	margin-bottom: 19px;
+	width: 30px;
+}
+
+.menus-right-bar img {
+	width: 30px;
+}
+
+.search-btn {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	z-index: 1;
+}
+
+.search-btn img {
+	width: 27px;
+}
+
+.melody-btn {
+	position: absolute;
+	bottom: 10%;
+	right: 19%;
+	z-index: 1;
+}
+
+.melody-btn img {
+	width: 15px;
+}
+
+.music-btn {
+	position: absolute;
+	bottom: 10%;
+	right: 6%;
+	z-index: 1;
+}
+
+.music-btn img {
+	width: 40px;
+}
+
+.share-guide {
+	position: absolute;
+	top: 0;
+	z-index: 4;
+	width: 100%;
+	height: 100%;
+	opacity: 0.9;
+	pointer-events: none;
+}
+
+.close-btn-for-share {
+	position: absolute;
+	top: 47%;
+	left: 25%;
+	z-index: 5;
+	width: 48%;
+	height: 12%;
+}
+
+.slogan {
+	font-family: "微软雅黑";
+	font-size: 0.9rem;
+	color: white;
+	position: absolute;
+	bottom: 10%;
+	left: 5%;
+}
