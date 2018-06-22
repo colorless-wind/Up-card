@@ -3,7 +3,7 @@ $('.mui-content').fadeIn();
 //右侧功能按钮
 //搜索
 $('.search-btn').on('tap', function() {
-	var proCode = GetQueryString(location.href,'pro_code');
+	var proCode = GetQueryString(location.href, 'pro_code');
 	location.href = 'https://xyk.cebbank.com/cebmms/apply/ps/card-list.htm?pro_code=' + proCode;
 })
 //关注
@@ -87,33 +87,33 @@ var list = [
 	{
 		content: document.querySelector('#meng-series-2-tpl').innerHTML
 	},
-//	{
-//		content: document.querySelector('#meng-series-1-tpl').innerHTML
-//	},
-//	{
-//		content: document.querySelector('#xing-series-3-tpl').innerHTML
-//	},
-//	{
-//		content: document.querySelector('#xing-series-2-tpl').innerHTML
-//	},
+	//	{
+	//		content: document.querySelector('#meng-series-1-tpl').innerHTML
+	//	},
+	//	{
+	//		content: document.querySelector('#xing-series-3-tpl').innerHTML
+	//	},
+	//	{
+	//		content: document.querySelector('#xing-series-2-tpl').innerHTML
+	//	},
 	{
 		content: document.querySelector('#xing-series-1-tpl').innerHTML
 	},
-//	{
-//		content: document.querySelector('#ran-series-5-tpl').innerHTML
-//	},
+	//	{
+	//		content: document.querySelector('#ran-series-5-tpl').innerHTML
+	//	},
 	{
 		content: document.querySelector('#ran-series-4-tpl').innerHTML
 	},
 	{
 		content: document.querySelector('#ran-series-3-tpl').innerHTML
 	},
-//	{
-//		content: document.querySelector('#ran-series-2-tpl').innerHTML
-//	},
-//	{
-//		content: document.querySelector('#ran-series-1-tpl').innerHTML
-//	}
+	//	{
+	//		content: document.querySelector('#ran-series-2-tpl').innerHTML
+	//	},
+	//	{
+	//		content: document.querySelector('#ran-series-1-tpl').innerHTML
+	//	}
 ]
 
 var initIndex = parseInt(GetQueryString(location.href, 'initIndex'));
@@ -168,7 +168,21 @@ var S = new iSlider({
 	//	isDebug: true,
 	isVertical: true
 });
-
+//初始化音乐图标
+switch(initIndex) {
+	case 2:
+		$('.music-btn').find('img').attr('src', 'img/icon_duck.png');
+		break;
+	case 3:
+		$('.music-btn').find('img').attr('src', 'img/iconxing.png');
+		break;
+	case 5:
+		$('.music-btn').find('img').attr('src', 'img/iconcup.png');
+		break;
+	default:
+		$('.music-btn').find('img').attr('src', 'img/icon_up.png');
+}
+//初始化滑动组件
 var ran3Swiper;
 var xing1Swiper;
 var xing2Swiper;
@@ -176,81 +190,81 @@ var xing3Swiper;
 var meng2Swiper;
 
 ran3Swiper = new Swiper('.swiper-container-ran3', {
-				//		direction: '',
-				loop: true,
-				effect: 'coverflow',
-				slidesPerView: 3,
-				centeredSlides: true,
-				//		setWrapperSize: true,
-				//		height:200,//你的slide高度
-				//		autoHeight:true,
-				coverflowEffect: {
-					rotate: 0,
-					stretch: 20,
-					depth: 120,
-					modifier: 2,
-					slideShadows: false,
-					other: {
-						type: 'ran',
-//						translateX: -20
-					}
-				},
-				on: {
-					slideChangeTransitionEnd: function() {
+	//		direction: '',
+	loop: true,
+	effect: 'coverflow',
+	slidesPerView: 2,
+	centeredSlides: true,
+	//				width:400,
+	//		setWrapperSize: true,
+	//		height:200,//你的slide高度
+	//		autoHeight:true,
+	coverflowEffect: {
+		rotate: 0,
+		stretch: 30,
+		depth: 250,
+		modifier: 2,
+		slideShadows: false,
+		other: {
+			type: 'ran',
+		}
+	},
+	on: {
+		slideChangeTransitionEnd: function() {
 
-					},
-				}
-			})
+		},
+	}
+})
 
 xing1Swiper = new Swiper('.swiper-container-xing1', {
-				//		direction: '',
-				loop: true,
-				effect: 'coverflow',
-				slidesPerView: 3,
-				//		centeredSlides: true,
-				//		setWrapperSize: true,
-				//		height:200,//你的slide高度
-				//		autoHeight:true,
-				coverflowEffect: {
-					rotate: 0,
-					stretch: 30,
-					depth: 90,
-					modifier: 2,
-					slideShadows: false,
-					other: {
-						type: 'xing',
-						translateX: -10
-					}
-				},
-				on: {
-					slideChangeTransitionEnd: function() {
-						console.log($('#xing-series-1').find('.swiper-slide-next').attr('data-name'))
-						$('#xing-series-1').find('.constellation').text($('#xing-series-1').find('.swiper-slide-next').attr('data-name'));
-					},
-				}
-			})
+	//		direction: '',
+	loop: true,
+	effect: 'coverflow',
+	slidesPerView: 3,
+	//		centeredSlides: true,
+	//		setWrapperSize: true,
+	//		height:200,//你的slide高度
+	//		autoHeight:true,
+	coverflowEffect: {
+		rotate: 0,
+		stretch: 30,
+		depth: 90,
+		modifier: 2,
+		slideShadows: false,
+		other: {
+			type: 'xing',
+			translateX: -10
+		}
+	},
+	on: {
+		slideChangeTransitionEnd: function() {
+			console.log($('#xing-series-1').find('.swiper-slide-next').attr('data-name'))
+			$('#xing-series-1').find('.constellation').text($('#xing-series-1').find('.swiper-slide-next').attr('data-name'));
+		},
+	}
+})
 
 meng2Swiper = new Swiper('.swiper-container-meng2', {
-				direction: 'vertical',
-				loop: true,
-				effect: 'coverflow',
-				slidesPerView: 2.5,
-				centeredSlides: true,
-				//		setWrapperSize: true,
-				height: 200, //你的slide高度
-				//		autoHeight:true,
-				coverflowEffect: {
-					rotate: 1,
-					stretch: 0,
-					depth: 10,
-					modifier: 10,
-					slideShadows: false,
-					other: {
-						type: 'meng',
-						translateZ: 130
-					}
-				},
-			})
+	direction: 'vertical',
+	loop: true,
+	effect: 'coverflow',
+	slidesPerView: 2.5,
+	centeredSlides: true,
+	//		setWrapperSize: true,
+	height: 200, //你的slide高度
+	//		autoHeight:true,
+	coverflowEffect: {
+		rotate: 1,
+		stretch: 0,
+		depth: 10,
+		modifier: 10,
+		slideShadows: false,
+		other: {
+			type: 'meng',
+			translateZ: 130
+		}
+	},
+})
 
 S.on('slideChanged', function(index, dom) {
 	if(index > 3) {
@@ -321,7 +335,7 @@ S.on('slideChanged', function(index, dom) {
 	//滑动初始化
 	if(document.querySelector('#ran-series-3')) {
 		if(!ran3Swiper) {
-			ran3Swiper = new Swiper('.swiper-container-ran3', {
+			/*ran3Swiper = new Swiper('.swiper-container-ran3', {
 				//		direction: '',
 				loop: true,
 				effect: 'coverflow',
@@ -346,12 +360,38 @@ S.on('slideChanged', function(index, dom) {
 
 					},
 				}
+			})*/
+			ran3Swiper = new Swiper('.swiper-container-ran3', {
+				//		direction: '',
+				loop: true,
+				effect: 'coverflow',
+				slidesPerView: 2,
+				centeredSlides: true,
+				//				width:400,
+				//		setWrapperSize: true,
+				//		height:200,//你的slide高度
+				//		autoHeight:true,
+				coverflowEffect: {
+					rotate: 0,
+					stretch: 30,
+					depth: 250,
+					modifier: 2,
+					slideShadows: false,
+					other: {
+						type: 'ran',
+					}
+				},
+				on: {
+					slideChangeTransitionEnd: function() {
+
+					},
+				}
 			})
 			$('#ran-series-3').find('.card-apply').on('tap', function() {
 				if($('#ran-series-3').find('.swiper-slide-active').attr('data-name') == '光大VISA世界杯卡') {
 					var pro_code = GetQueryString(location.href, 'pro_code');
 					var cardId = $('#ran-series-3').find('.swiper-slide-active').attr('data-card-id');
-					location.href = 'https://xyk.cebbank.com/cebmms/apply/ps/card-index.htm?req_card_id='+ cardId +'&pro_code=' + pro_code + '&c2c_recom_flag=';
+					location.href = 'https://xyk.cebbank.com/cebmms/apply/ps/card-index.htm?req_card_id=' + cardId + '&pro_code=' + pro_code + '&c2c_recom_flag=';
 				}
 			})
 		}
