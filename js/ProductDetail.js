@@ -123,33 +123,33 @@ if(initIndex > 3) {
 	$('.product-btn').find('img').attr('src', 'img/666_select.png');
 	$('.me-btn').find('img').attr('src', 'img/216.png');
 
-	$('.new-btn').removeClass('zoomInOut');
-	$('.product-btn').removeClass('zoomInOut');
-	$('.me-btn').removeClass('zoomInOut');
+	$('.new-btn').find('img').removeClass('zoomInOut');
+	$('.product-btn').find('img').removeClass('zoomInOut');
+	$('.me-btn').find('img').removeClass('zoomInOut');
 	setTimeout(function() {
-		$('.product-btn').addClass('zoomInOut');
+		$('.product-btn').find('img').addClass('zoomInOut');
 	}, 50)
 } else if(initIndex > 2) {
 	$('.new-btn').find('img').attr('src', 'img/120_select.png');
 	$('.product-btn').find('img').attr('src', 'img/666.png');
 	$('.me-btn').find('img').attr('src', 'img/216.png');
 
-	$('.new-btn').removeClass('zoomInOut');
-	$('.product-btn').removeClass('zoomInOut');
-	$('.me-btn').removeClass('zoomInOut');
+	$('.new-btn').find('img').removeClass('zoomInOut');
+	$('.product-btn').find('img').removeClass('zoomInOut');
+	$('.me-btn').find('img').removeClass('zoomInOut');
 	setTimeout(function() {
-		$('.new-btn').addClass('zoomInOut');
+		$('.new-btn').find('img').addClass('zoomInOut');
 	}, 50)
 } else if(initIndex <= 2) {
 	$('.new-btn').find('img').attr('src', 'img/120.png');
 	$('.product-btn').find('img').attr('src', 'img/666.png');
 	$('.me-btn').find('img').attr('src', 'img/216_select.png');
 
-	$('.new-btn').removeClass('zoomInOut');
-	$('.product-btn').removeClass('zoomInOut');
-	$('.me-btn').removeClass('zoomInOut');
+	$('.new-btn').find('img').removeClass('zoomInOut');
+	$('.product-btn').find('img').removeClass('zoomInOut');
+	$('.me-btn').find('img').removeClass('zoomInOut');
 	setTimeout(function() {
-		$('.me-btn').addClass('zoomInOut');
+		$('.me-btn').find('img').addClass('zoomInOut');
 	}, 50)
 } else {
 	console.log(initIndex);
@@ -272,31 +272,31 @@ S.on('slideChanged', function(index, dom) {
 		$('.product-btn').find('img').attr('src', 'img/666_select.png');
 		$('.me-btn').find('img').attr('src', 'img/216.png');
 
-		$('.new-btn').removeClass('zoomInOut');
-		$('.product-btn').removeClass('zoomInOut');
-		$('.me-btn').removeClass('zoomInOut');
+		$('.new-btn').find('img').removeClass('zoomInOut');
+		$('.product-btn').find('img').removeClass('zoomInOut');
+		$('.me-btn').find('img').removeClass('zoomInOut');
 		setTimeout(function() {
-			$('.product-btn').addClass('zoomInOut');
+			$('.product-btn').find('img').addClass('zoomInOut');
 		}, 50)
 	} else if(index > 2) {
 		$('.new-btn').find('img').attr('src', 'img/120_select.png');
 		$('.product-btn').find('img').attr('src', 'img/666.png');
 		$('.me-btn').find('img').attr('src', 'img/216.png');
-		$('.new-btn').removeClass('zoomInOut');
-		$('.product-btn').removeClass('zoomInOut');
-		$('.me-btn').removeClass('zoomInOut');
+		$('.new-btn').find('img').removeClass('zoomInOut');
+		$('.product-btn').find('img').removeClass('zoomInOut');
+		$('.me-btn').find('img').removeClass('zoomInOut');
 		setTimeout(function() {
-			$('.new-btn').addClass('zoomInOut');
+			$('.new-btn').find('img').addClass('zoomInOut');
 		}, 50)
 	} else if(index <= 2) {
 		$('.new-btn').find('img').attr('src', 'img/120.png');
 		$('.product-btn').find('img').attr('src', 'img/666.png');
 		$('.me-btn').find('img').attr('src', 'img/216_select.png');
-		$('.new-btn').removeClass('zoomInOut');
-		$('.product-btn').removeClass('zoomInOut');
-		$('.me-btn').removeClass('zoomInOut');
+		$('.new-btn').find('img').removeClass('zoomInOut');
+		$('.product-btn').find('img').removeClass('zoomInOut');
+		$('.me-btn').find('img').removeClass('zoomInOut');
 		setTimeout(function() {
-			$('.me-btn').addClass('zoomInOut');
+			$('.me-btn').find('img').addClass('zoomInOut');
 		}, 50)
 	} else {
 		console.log(index);

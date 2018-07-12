@@ -82,6 +82,12 @@ var list = [
 	//		content: '<img src="img/Product4.png" style="width:100%;height:100%;"/><a data-card-id="fire03" class="card-apply" style="width: 40%;position:  absolute;z-index:  99999;top: 5%;right: 6%;display:  block;padding: 0;margin: 0;"><img src="img/Apply_btn.png" style="width: 100%;"></a>'
 	//	},
 	{
+		content: '<div class="slogan">你有你的选择 I have my ATTITUDE</div><img src="img/toutiao.png" style="width:100%;height:100%;"/><a data-card-id="up05" data-index="0" class="show-up-btn1" style="width: 26%;height:50px;position: absolute;z-index: 1;bottom: 20%;right: 25%;"><img src="img/btn_showup.png" style="width: 100%;"></a>'
+	},
+	{
+		content: '<div class="slogan">对你不仅仅是喜欢 My love in it</div><img src="img/tencent.png" style="width:100%;height:100%;"/><a data-card-id="up04" data-index="0" class="show-up-btn1" style="width: 26%;height:50px;position: absolute;z-index: 1;bottom: 20%;right: 25%;"><img src="img/btn_showup.png" style="width: 100%;"></a>'
+	},
+	{
 		content: '<div class="slogan">承 |萌| |光| 爱，带我回家</div><img src="img/meng.png" style="width:100%;height:100%;"/><a data-card-id="up03" data-index="2" class="show-up-btn" style="width: 26%;height:50px;position: absolute;z-index: 1;bottom: 20%;right: 25%;"><img src="img/btn_showup.png" style="width: 100%;"></a>'
 	},
 	{
@@ -140,7 +146,7 @@ var S = new iSlider({
 	isOverspread: 1,
 	animateTime: 800,
 	//animateType:'depth',
-	initIndex: 3,
+	initIndex: 5,
 	//	isDebug: true,
 	isVertical: true
 });
@@ -156,44 +162,70 @@ S.on('slideStart', function() {
 S.on('slideChanged', function(index, dom) {
 
 	$('.operation-guide').show();
-	if(index == 3) {
+	if(index == 5) {
 		$('.new-btn').find('img').attr('src', 'img/120.png');
 		$('.product-btn').find('img').attr('src', 'img/666.png');
 		$('.me-btn').find('img').attr('src', 'img/216.png');
-		$('.new-btn').removeClass('zoomInOut');
-		$('.product-btn').removeClass('zoomInOut');
-		$('.me-btn').removeClass('zoomInOut');
+		$('.new-btn').find('img').removeClass('zoomInOut');
+		$('.product-btn').find('img').removeClass('zoomInOut');
+		$('.me-btn').find('img').removeClass('zoomInOut');
+		$('.me-btn').show();
 
-	} else if(index == 2) {
+	} else if(index == 4) {
 		$('.new-btn').find('img').attr('src', 'img/120.png');
 		$('.product-btn').find('img').attr('src', 'img/666_select.png');
 		$('.me-btn').find('img').attr('src', 'img/216.png');
-		$('.new-btn').removeClass('zoomInOut');
-		$('.product-btn').removeClass('zoomInOut');
-		$('.me-btn').removeClass('zoomInOut');
+		$('.new-btn').find('img').removeClass('zoomInOut');
+		$('.product-btn').find('img').removeClass('zoomInOut');
+		$('.me-btn').find('img').removeClass('zoomInOut');
 		setTimeout(function() {
-			$('.product-btn').addClass('zoomInOut');
+			$('.product-btn').find('img').addClass('zoomInOut');
 		}, 50)
-	} else if(index == 1) {
+		$('.me-btn').show();
+	} else if(index == 3) {
 		$('.new-btn').find('img').attr('src', 'img/120_select.png');
 		$('.product-btn').find('img').attr('src', 'img/666.png');
 		$('.me-btn').find('img').attr('src', 'img/216.png');
-		$('.new-btn').removeClass('zoomInOut');
-		$('.product-btn').removeClass('zoomInOut');
-		$('.me-btn').removeClass('zoomInOut');
+		$('.new-btn').find('img').removeClass('zoomInOut');
+		$('.product-btn').find('img').removeClass('zoomInOut');
+		$('.me-btn').find('img').removeClass('zoomInOut');
 		setTimeout(function() {
-			$('.new-btn').addClass('zoomInOut');
+			$('.new-btn').find('img').addClass('zoomInOut');
 		}, 50)
-	} else if(index == 0) {
+		$('.me-btn').show();
+	} else if(index == 2) {
 		$('.new-btn').find('img').attr('src', 'img/120.png');
 		$('.product-btn').find('img').attr('src', 'img/666.png');
 		$('.me-btn').find('img').attr('src', 'img/216_select.png');
-		$('.new-btn').removeClass('zoomInOut');
-		$('.product-btn').removeClass('zoomInOut');
-		$('.me-btn').removeClass('zoomInOut');
+		$('.new-btn').find('img').removeClass('zoomInOut');
+		$('.product-btn').find('img').removeClass('zoomInOut');
+		$('.me-btn').find('img').removeClass('zoomInOut');
 		setTimeout(function() {
-			$('.me-btn').addClass('zoomInOut');
+			$('.me-btn').find('img').addClass('zoomInOut');
 		}, 50)
+		$('.me-btn').show();
+	} else if(index == 1) {
+		$('.new-btn').find('img').attr('src', 'img/520_select.png');
+		$('.product-btn').find('img').attr('src', 'img/youtaidu.png');
+		$('.me-btn').find('img').attr('src', '');
+		$('.new-btn').find('img').removeClass('zoomInOut');
+		$('.product-btn').find('img').removeClass('zoomInOut');
+		$('.new-btn').find('img').removeClass('zoomInOut');
+		setTimeout(function() {
+			$('.new-btn').find('img').addClass('zoomInOut');
+		}, 50)
+		$('.me-btn').hide();
+	} else if(index == 0) {
+		$('.new-btn').find('img').attr('src', 'img/520.png');
+		$('.product-btn').find('img').attr('src', 'img/youtaidu_select.png');
+		$('.me-btn').find('img').attr('src', '');
+		$('.new-btn').find('img').removeClass('zoomInOut');
+		$('.product-btn').find('img').removeClass('zoomInOut');
+		$('.product-btn').find('img').removeClass('zoomInOut');
+		setTimeout(function() {
+			$('.product-btn').find('img').addClass('zoomInOut');
+		}, 50)
+		$('.me-btn').hide();
 		$('.operation-guide').hide();
 	} else {
 		console.log(index);
